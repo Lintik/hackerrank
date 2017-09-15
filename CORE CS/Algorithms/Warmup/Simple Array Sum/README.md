@@ -20,4 +20,4 @@ __Sample Output__
 
 __Explanation__
 
-We print the sum of the array's elements, which is: 1 + 2 + 3 + 4 + 10 + 11;
+We print the sum of the array's elements, which is: 1 + 2 + 3 + 4 + 10 + 11 = 31;
