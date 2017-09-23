@@ -10,7 +10,7 @@ public class Solution {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         for(int i = 1;i<11;i++){
-            String t = String.format("2 x %s = %s", String.valueOf(i), String.valueOf(N*i));
+            String t = String.format("%s x %s = %s",String.valueOf(N), String.valueOf(i), String.valueOf(N*i));
             System.out.println(t);
         }
     }
