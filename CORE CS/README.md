@@ -1,1 +1,6 @@
-# Core CS
+# CORE CS
+
+
++ [Algorithms]
++ [Data Structure]
++ [Mathematics]
