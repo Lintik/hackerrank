@@ -1,3 +1,8 @@
-# hackerrank
-hackerrank challenges
+# HackeRrank
+
++ CORE CS
++ Tutorials
++ Specialized Skills
++ Languages
+
 
