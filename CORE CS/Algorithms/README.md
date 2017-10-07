@@ -11,4 +11,4 @@
 |[Staircase]|[code.cpp]|[code.java]|[code.cs]|[code.py3]|
 |[Mini-Max Sum]|[code.cpp]|[code.java]|[code.cs]|[code.py3]|
 |[Birthday Cake Candles]|[code.cpp]|[code.java]|[code.cs]|[code.py3]|
-|[Time Conversion]|[code.cpp]|[code.java]|[code.cs]|[code.py3]|
+|[Time Conversion](https://github.com/Lintik/hackerrank/blob/master/CORE%20CS/Algorithms/Warmup/Time%20Conversion/time-conversion-English.pdf)|[code.cpp]|[code.java]|[code.cs]|[code.py3]|
