@@ -1,5 +1,5 @@
 # Algorithms
-+ Warm Up
++ [Warm Up](https://github.com/Lintik/hackerrank/tree/master/CORE%20CS/Algorithms/Warmup)
 
 |Problem Statement| c++ | java | c# | python |
 |---|---|---|---|---|
