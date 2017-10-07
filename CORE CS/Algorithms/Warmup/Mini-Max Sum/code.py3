@@ -1,9 +1,6 @@
-#!/bin/python3
-
-import sys
-
-arr = list(map(int, input().strip().split(' ')))
-
-sorted(arr)
-print(sum(arr[:-1:]), end=' ')
-print(sum(arr[1::]))
+a = input().strip().split(' ')
+for i in range(0, len(a)):
+    a[i] = int(a[i])
+    
+s = sum(a)
+print(str(s - max(a)) + " " + str(s - min(a)))
