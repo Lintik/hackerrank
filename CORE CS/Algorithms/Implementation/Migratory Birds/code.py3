@@ -4,11 +4,12 @@ import sys
 
 def migratoryBirds(n, ar):
     # Complete this function
-    sorted(ar)
+    ar.sort()
     prev = freq = ar[0]
     c = mc = 1
-    for i in range(1,len(ar)):
-        if(ar[i] == prev): c+=1
+    for i in range(1,n):
+        if(ar[i] == prev): 
+            c+=1
         else:
             if(c > mc):
                 freq = ar[i-1]
