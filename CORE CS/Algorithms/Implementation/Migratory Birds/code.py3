@@ -6,7 +6,7 @@ def migratoryBirds(n, ar):
     # Complete this function
     sorted(ar)
     prev = freq = ar[0]
-    c = mc = 0
+    c = mc = 1
     for i in range(1,len(ar)):
         if(ar[i] == prev): c+=1
         else:
