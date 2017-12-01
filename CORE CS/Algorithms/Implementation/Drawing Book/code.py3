@@ -4,7 +4,7 @@ import sys
 
 def solve(n, p):
     # Complete this function
-    return int(min(p/2,n/2-p/2))
+    return min(p//2,n//2-p//2)
 
 n = int(input().strip())
 p = int(input().strip())
