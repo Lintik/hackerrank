@@ -4,7 +4,7 @@ import java.lang.*;
 
 public class Solution {
     static int solve(int n, String ar){
-          int depth = 0;
+        int depth = 0;
         int t = 0;
         for(int i = 0; i < n;i++){
             if(depth < 0){
