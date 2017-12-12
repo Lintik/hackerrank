@@ -3,14 +3,22 @@ using namespace std;
 
 vector<int> findRank(vector<int> score, int n, vector<int> a, int m){
     score.erase(unique( score.begin(), score.end() ), score.end() );
-    for(int i = m - 1; i >= 0;i--){
-        for(int j = 0; j < score.size();j++){
-            if(a[i] >= score[j]){
+    int j = score.size() - 1;
+    for(int i = 0; i < a.size();i++){
+        while(j>=0){
+            if(a[i] < score[j]){
+                a[i] = j + 2;
+                break;
+            }
+            else if(a[i] == score[j]){
                 a[i] = j + 1;
                 break;
             }
-            else if(j == score.size() - 1)
-                a[i] = j + 2;
+            else if(a[i] >= score[0]){
+                a[i] = 1;
+                break;
+            }
+            j--;
         }
     }
     return a;
