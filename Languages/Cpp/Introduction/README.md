@@ -7,7 +7,7 @@
 |[Basic Data Types](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Basic%20Data%20Types/c-tutorial-basic-data-types-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Basic%20Data%20Types/code.cpp)|
 |[Conditional Statement](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Conditional%20Statements/c-tutorial-conditional-if-else-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Conditional%20Statements/code.cpp)|
 |[For Loop](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/For%20Loop/c-tutorial-for-loop-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/For%20Loop/code.cpp)|
-||[code.cpp]|
+|[Functions](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Functions/c-tutorial-functions-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Functions/code.cpp)|
 ||[code.cpp]|
 ||[code.cpp]|
 ||[code.cpp]|
