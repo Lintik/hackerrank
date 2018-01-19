@@ -10,4 +10,4 @@
 |[Functions](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Functions/c-tutorial-functions-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Functions/code.cpp)|
 |[Pointer](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Pointer/c-tutorial-pointer-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Pointer/code.cpp)|
 |[Arrays Introduction](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Arrays%20Introduction/arrays-introduction-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Arrays%20Introduction/code.cpp)|
-||[code.cpp]|
+|[Variable Sized Array](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Variable%20Sized%20Arrays/variable-sized-arrays-English.pdf)|[code.cpp]https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Introduction/Variable%20Sized%20Arrays/code.cpp)|
