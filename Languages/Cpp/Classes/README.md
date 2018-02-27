@@ -3,7 +3,7 @@
 |Problem Statement|c++|
 |---|---|
 |[Structs](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Classes/Structs/c-tutorial-struct-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Classes/Structs/code.cpp)|
-|[Class]|[code.cpp]|
+|[Class](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Classes/Class/c-tutorial-class-English.pdf)|[code.cpp](https://github.com/Lintik/hackerrank/blob/master/Languages/Cpp/Classes/Class/code.cpp)|
 |[Classes and Objects]|[code.cpp]|
 |[Box It!]|[code.cpp]|
 |[Inherited Code]|[code.cpp]|
