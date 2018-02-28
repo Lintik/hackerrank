@@ -2,13 +2,14 @@
 using namespace std;
 
 class Box{
-    public:
+    private:
         int l, b, h;
+    public:
         Box(): l(0), b(0), h(0){}
-        Box(int length, int breath, int height){
+        Box(int length, int breadth, int height){
             l = length;
             h = height;
-            b = breath;
+            b = breadth;
         }
         Box(Box& box){
             this->l = box.l;
@@ -38,13 +39,13 @@ class Box{
             else
                 return false;
         }
+        friend ostream& operator<<(ostream& out, const Box& B);
 };
 
 ostream& operator<<(ostream& out, Box& B){
-            out << B.l << ' ' << B.b << ' ' << B.h;
+            out << B.getLength() << ' ' << B.getBreadth() << ' ' << B.getHeight();
             return out;  
 }
-
 void check2()
 {
 	int n;
