@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int max_of_four(int a, int b, int c, int d){
     a = a > b? a:b;
     c = c > d? c:d;
