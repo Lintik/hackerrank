@@ -5,11 +5,10 @@
 
 int main() 
 {
-	
+	  printf("Hello, World!\n");
     char s[100];
-    scanf("%[^\n]%*c", &s);
-  	printf("Hello, World!\n");
-    printf("Welcome to C programming.");
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    scanf("%[^\n]%*c", s);
+  	printf("%s", s);
+    
     return 0;
 }
