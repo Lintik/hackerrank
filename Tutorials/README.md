@@ -6,7 +6,7 @@
 + Dictionaries and Hashmaps
 + Sorting
 + String Manipulation
-+ Greedy Manipulation
++ Greedy
 + Search
 + Dynamic Programming
 + Stacks and Queues
