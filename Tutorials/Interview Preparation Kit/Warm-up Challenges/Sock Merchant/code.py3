@@ -16,8 +16,8 @@ def sockMerchant(n, ar):
             c=1
             prev=ar[i]
             
-    t+=math.floor(c/2);
-    return t;
+    t+=math.floor(c/2)
+    return t
 
 n = int(input().strip())
 ar = list(map(int, input().strip().split(' ')))
