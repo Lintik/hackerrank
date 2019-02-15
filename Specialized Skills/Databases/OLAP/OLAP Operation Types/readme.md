@@ -2,13 +2,19 @@
 
 Consider a fact table DataPoint(D1, D2, D3, x), and the following three quesries
 
+Q1
+
 ```sql
 Select D1, D2, D3, Sum(x) From Datapoints Group By D1, D2, D3
 ```
 
+Q2
+
 ```sql
 Select D1, D2, D3, Sum(x) From Datapoints Group By D1, D2, D3 WITH CUBE
 ```
+
+Q3
 
 ```sql
 Select D1, D2, D3, Sum(x) From Datapoints Group By D1, D2, D3 WITH ROLLUP
@@ -21,4 +27,9 @@ Suppose attributes D1, D2, and D3 have n1, n2, and n3 different values respectiv
 + (5, 10, 10, 500, 1000, 550)
 + (4, 7, 3, 84, 160, 117)
 
-Answer: 
+Answer: (4, 7, 3, 84, 160, 117)
+
+Explanation:
+
++ ROLLUP: a\*b\*c + (a\*b) + (a) + 1
++ CUBE:   a\*b\*c + (a\*b + a\*c + b\*c) + (a+b+c) + 1
