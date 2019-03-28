@@ -8,18 +8,16 @@ class Solution {
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
         int t = 0;
-        int[] r = new int[q.Length];
         for(int i = 0; i < q.Length;i++){
-            r[q[i] - 1] = q[i] - (i + 1);
-            if(r[i] > 2){
+            if(q[i] - i > 3){
                 Console.WriteLine("Too chaotic");
                 return;
             }
 
             for (int j = Math.Max(0, q[i] - 2); j < i; j++)
                 if (q[j] > q[i]) t++;
-            
         }
+
         Console.WriteLine(t);
     }
 
