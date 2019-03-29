@@ -19,9 +19,11 @@ void minimumBribes(int q_count, int* q) {
             printf("Too chaotic\n");
             return;
         }
-        for(int j = max(0, q[i] - 2);j < i;j++)
+        for(int j = 0 >  q[i] - 2? 0 : q[i] - 2;j < i;j++)
+            if(q[j] > q[i]) t++;
     }
-
+    printf("%i\n",t);
+    return;
 }
 
 int main()
