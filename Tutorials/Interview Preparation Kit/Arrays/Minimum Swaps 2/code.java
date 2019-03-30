@@ -34,7 +34,6 @@ public class Solution {
         }
 
         return c;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
