@@ -37,8 +37,8 @@ function main() {
     for (let i = 0; i < m; i++){
         let queries = readLine().split(' ').map(queriesTemp => parseInt(queriesTemp, 10));
         a[queries[0]] += queries[2];
-        if (queries[0] + 1 <= n)
-            a[queries[0] + 1] -= queries[2];
+        if (queries[1] + 1 <= n)
+            a[queries[1] + 1] -= queries[2];
     }
 
     for (let i = 1; i <= n; i++) {
