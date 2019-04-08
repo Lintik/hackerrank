@@ -1,4 +1,5 @@
 using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System;
@@ -7,8 +8,11 @@ class Solution {
 
     // Complete the twoStrings function below.
     static string twoStrings(string s1, string s2) {
+        HashSet<char> s = new HashSet<char>();
+        foreach(char c in s1)
+            s.Add(c);
         foreach(char c in s2){
-            if(s1.IndexOf(c) != -1)
+            if(s.Contains(c))
                 return "YES";
         }
         return "NO";
