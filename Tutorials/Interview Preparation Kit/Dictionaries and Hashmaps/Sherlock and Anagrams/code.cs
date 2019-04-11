@@ -29,8 +29,6 @@ class Solution {
             
         
         foreach (KeyValuePair<string, int> s1 in subs) {
-            Console.Write(s1.Key);
-            Console.WriteLine(s1.Value);
             if(s1.Value > 1){
                 count += (s1.Value - 1) * (s1.Value) / 2;
             }
