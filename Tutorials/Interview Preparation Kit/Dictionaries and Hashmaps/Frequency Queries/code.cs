@@ -50,12 +50,10 @@ class Solution {
                         f[m]--;
                         if(f[m] <= 0) f.Remove(m);
                     }
-                    if(f.ContainsKey(m1)){
+                    if(f.ContainsKey(m1))
                         f[m1]++;
-                    }
-                    else{
+                    else
                         f[m1] = 1;
-                    }
 
                 }
                 else{//no occurence detected
