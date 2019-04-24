@@ -1,90 +1,50 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-// Complete the freqQuery function below.
-vector<int> freqQuery(vector<vector<int>> queries) {
-    map<int , int> c;
-    map<int , int> f;
-    vector<int> r;
-    for (int i = 0; i < queries.size(); i++) {
-        int type = queries[i][0];
-        int n = queries[i][1];
-        if (type == 1) {
-            if (c.find(n) != c.end()) { // 2-nth insertion
-                int m = c[n]++;
-                int m1 = m + 1;
+map<int, int> c, f;
 
-                if (f.find(m1) != f.end())
-                    f[m1]++;
-                else
-                    f[m1] = 1;
+int main() {
+    int n;
+    cin >> n;
+    int a[n], b[n];
 
-                if (f.find(m) != f.end()) {
-                    f[m]--;
-                    if (f[m] < 1)
-                    f.erase(m);
-                }
-            } 
-            else { // first insertion
-                c[n] = 1;
-                if (f.find(1) != f.end())
-                    f[1]++;
-                else
-                    f[1] = 1;
+    for (int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+        scanf("%d", &b[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        // insert query
+        if (a[i] == 1) {
+            int k = c[b[i]];
+            // decrease count of present frequency
+            if (k > 0)
+            f[k]--;
+            // increase occurence of a number
+            c[b[i]]++;
+            // increase count of present frequency + 1
+            f[k + 1]++;
+        }
+
+        // delete query
+        else if (a[i] == 2) {
+            int k = c[b[i]];
+            if (k > 0) {
+            // decrease occurence of a number
+            c[b[i]]--;
+            // decrease count of present frequency
+            f[k]--;
+            // increase count of present frequency - 1
+            if (k - 1 > 0)
+                f[k - 1]++;
             }
-      } else if (type == 2) {
-            if (c.find(n) != c.end()) {
-                int m = c[n]--;
-                int m1 = m - 1;
-
-                if (m1 <= 0) {
-                    c.erase(n);
-                }
-                if (f.find(m)!= f.end()) {
-                    f[m]--;
-                    if (f[m] <= 0)
-                    f.erase(m);
-                }
-                if (f.find(m1)!= f.end()) 
-                    f[m1]++;
-                else 
-                    f[m1] = 1;
-
-            } 
-            else  // no occurence detected
-                continue;
-        } 
-        else {
-            if (f.find(n) != f.end())
-                r.push_back(1);
+        } else {
+            // true if the count of asked frequency is non-zero
+            if (f[b[i]] > 0)
+                printf("1\n");
             else
-                r.push_back(0);
+                printf("0\n");
         }
     }
-    return r;
+    return 0;
 }
-
-int main()
-{
-    int n = 0, x, y;
-    cin >> n;
-    vector<vector<int>> a;
-    for(int i = 0; i < n;i++){
-        vector<int> b;
-        cin >> x;
-        cin >> y;
-        b.push_back(x);
-        b.push_back(y);
-        a.push_back(b);
-    }
-
-    vector<int> c = freqQuery(a);
-    for(int i = 0; i < c.size();i++){
-        if(c[i] == 0) 
-            cout << 0 << endl;
-        else 
-            cout << 1 << endl;
-    }
-}
-
