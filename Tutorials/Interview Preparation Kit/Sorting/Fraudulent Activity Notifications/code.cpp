@@ -4,7 +4,6 @@ using namespace std;
 // Complete the activityNotifications function below.
 int activityNotifications(vector<int> a, int d) {
     vector<int> b(d);
-    vector<int> c(d);
     int e = d/2;
     int count = 0;
     for(int i = 0; i < d;i++)
