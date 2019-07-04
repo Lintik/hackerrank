@@ -1,6 +1,1 @@
-object Solution extends App {
-    def f(n: Int) = Stream.fill(n)("Hello World") foreach {println}
-
-    var n = scala.io.StdIn.readInt
-    f(n)
-}
+def f(num:Int,arr:List[Int]):List[Int] = arr.flatMap(List.fill(num)(_))
