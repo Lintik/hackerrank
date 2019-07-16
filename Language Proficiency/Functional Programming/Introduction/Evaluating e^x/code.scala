@@ -1,11 +1,11 @@
 // To calculate n'th term, requires a list of ascending numbers starting from 1 e.g. 1, 2, 3...
-def f(x:Double, list:List[Double]):Double = list.foldLeft(1.0)((a, b) => a * x / b)
+//def f(x:Double, list:List[Double]):Double = list.foldLeft(1.0)((a, b) => a * x / b)
 
 // To sum first 10 terms
-def eF(x: Double):Double = Range(1, 10).toList.map(_.toDouble).inits.foldLeft(0.0)((a, b) => a + f(x, b))
+//def eF(x: Double):Double = Range(1, 10).toList.map(_.toDouble).inits.foldLeft(0.0)((a, b) => a + f(x, b))
     
 // Call this in main loop for solution
-println(eF(x))
+//println(eF(x))
 
 object Solution {
     
@@ -22,5 +22,4 @@ object Solution {
             println("%.4f".format(sum1))
         }
     }
-    
 }
