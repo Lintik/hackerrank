@@ -1,21 +1,51 @@
 open System
 
-let dx = 0.001
+let f aVals bVals x =
+    List.zip aVals bVals
+    |> List.map (fun (a,b) -> a * pown x b)
+    |> List.sum 
 
-let integral f l u =
-    [l..dx..u] |> (List.map (fun x -> (f x) * dx)) |> List.sum
+let area aVals bVals a b =
+    let delta = 0.001
+    let rec areaR p acc =
+        match p with
+        | p when p > b -> acc
+        | _ ->
+            let f' = delta * f aVals bVals p
+            //printfn "p=%f; f=%f; acc=%f" p f' acc
+            areaR (p + delta) (acc + f')
+    areaR a 0.0
 
-let poly l1 l2 x =
-    List.zip l1 l2
-    |> List.map (fun (a, b) -> a * (x ** b))
-    |> List.sum
+let volume aVals bVals a b =
+    let delta = 0.001
+    let PI = 3.141592653589
+    let rec volR p acc =
+        match p with
+        | p when p >= b -> acc
+        | _ ->
+            let f' = (pown (f aVals bVals p) 2) * PI * delta
+            //printfn "p=%f; f=%f; acc=%f" p f' acc
+            volR (p + delta) (acc + f')
+    volR a 0.0
 
-let rotate f x =
-    let y = f x
-    y * y * Math.PI
+[<EntryPoint>]
+let main argv = 
+    let x = 
+        stdin.ReadLine().Split(' ')
+        |> Array.map float
+        |> Array.toList
 
-let area l1 l2 l u =
-    integral (poly l1 l2) l u
+    let p = 
+        stdin.ReadLine().Split(' ')
+        |> Array.map int
+        |> Array.toList
+    
+    let ab =
+        stdin.ReadLine().Split(' ')
+        |> Array.map float
+    let a, b = ab.[0], ab.[1]
 
-let volume l1 l2 l u =
-    integral (poly l1 l2 |> rotate) l u
+    printfn "%.1f" <| area x p a b
+    printfn "%.1f" <| volume x p a b
+
+    0
