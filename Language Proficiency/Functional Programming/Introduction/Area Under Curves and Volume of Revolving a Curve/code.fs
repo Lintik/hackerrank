@@ -1,32 +1,23 @@
 open System
 
-let f aVals bVals x =
-    List.zip aVals bVals
-    |> List.map (fun (a,b) -> a * pown x b)
-    |> List.sum 
+let integral f left right =
+    let dx = 0.001
+    Seq.sum [ for x in left .. dx .. right -> (f x) * dx ]
 
-let area aVals bVals a b =
-    let delta = 0.001
-    let rec areaR p acc =
-        match p with
-        | p when p > b -> acc
-        | _ ->
-            let f' = delta * f aVals bVals p
-            //printfn "p=%f; f=%f; acc=%f" p f' acc
-            areaR (p + delta) (acc + f')
-    areaR a 0.0
+let polynomialExpr aSeq bSeq x =
+    Seq.zip aSeq bSeq
+    |> Seq.map (fun (a, b) -> a * pown x b)
+    |> Seq.sum
 
-let volume aVals bVals a b =
-    let delta = 0.001
-    let PI = 3.141592653589
-    let rec volR p acc =
-        match p with
-        | p when p >= b -> acc
-        | _ ->
-            let f' = (pown (f aVals bVals p) 2) * PI * delta
-            //printfn "p=%f; f=%f; acc=%f" p f' acc
-            volR (p + delta) (acc + f')
-    volR a 0.0
+let rotate f x =
+    let y = f x
+    y * y * Math.PI
+
+let area aSeq bSeq left right =
+    integral (polynomialExpr aSeq bSeq) left right
+
+let volume aSeq bSeq left right =
+    integral (rotate <| polynomialExpr aSeq bSeq) left right
 
 [<EntryPoint>]
 let main argv = 
