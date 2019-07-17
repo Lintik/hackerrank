@@ -5,6 +5,8 @@ def f(coefficients:List[Int],powers:List[Int],x:Double):Double =
 //Fill Up this function body
 // To compute the value of the function
 // For the given coefficients, powers and value of x
+    coefficients.zip(powers)
+    .foldLeft(0.0){case (acc,(c,p))=> acc + c * math.pow(x,p)}
 }
 
 // This function will be used while invoking "Summation" to compute 
@@ -17,14 +19,19 @@ def area(coefficients:List[Int],powers:List[Int],x:Double):Double =
 // To compute the area of the circle on revolving the point
 // (x,f(x)) around the X-Axis
 // For the given coefficients, powers and value of x
+    math.Pi * math.pow(f(coefficients,powers,x),2)
 }
 
 // This is the part where the series is summed up
-// This function is invoked once with func = f to compute the area 	     // under the curve
+// This function is invoked once with func = f to compute the area          // under the curve
 // Then it is invoked again with func = area to compute the volume 
 // of revolution of the curve
 def summation(func:(List[Int],List[Int],Double)=>Double,upperLimit:Int,lowerLimit:Int,coefficients:List[Int],powers:List[Int]):Double =
 {
 // Fill up this function
+    val step = 0.001
+    val subIntervals= lowerLimit.toDouble to upperLimit by step
+    subIntervals
+    .foldLeft(0.0){case (acc,x)=> acc + func(coefficients,powers,x)*step}
 }
 // The Input-Output functions will be handled by us. You only need to concentrate your effort on the function bodies above.
