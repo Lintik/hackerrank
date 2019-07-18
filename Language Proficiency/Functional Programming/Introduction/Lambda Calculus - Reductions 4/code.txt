@@ -11,3 +11,5 @@ b = (λx.(g (x x)))
 (g (g (b b)))
 (g (g (g (b b))))
 ...
+
+CAN'T REDUCE
