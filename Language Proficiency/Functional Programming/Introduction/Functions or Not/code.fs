@@ -10,7 +10,6 @@ let parseRelation (s: string) =
     match s.Split(' ') with
     | [|x|] -> int x, None
     | [|k; v|] -> int k, Some (int v)
-    | _ -> failwith "OhGodWhy"
 
 let readTestCase () =
     let n = int <| Console.ReadLine()
