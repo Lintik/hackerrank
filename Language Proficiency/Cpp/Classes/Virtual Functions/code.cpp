@@ -5,6 +5,18 @@
 #include <algorithm>
 using namespace std;
 
+class Person{
+
+};
+
+class Professor: public Person{
+
+};
+
+class Student: public Person{
+
+};
+
 int main(){
 
     int n, val;
