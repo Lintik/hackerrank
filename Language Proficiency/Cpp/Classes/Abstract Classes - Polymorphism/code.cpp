@@ -31,13 +31,13 @@ class Cache{
 class LRUCache: public Cache
 {
     public:
-    LRUCache(int c) { cp = c; }
+    LRUCache(int c): cp(c) {}
     
     void set(int k,int v)
     {
         Node *N;
         
-        if(mp.empty()) //No nodes 
+        if(mp.empty())
         {
             N = new Node(k,v);
             tail = head = N;
@@ -48,18 +48,18 @@ class LRUCache: public Cache
         
         auto it = mp.find(k);
             
-        if(it != mp.end()) //In hash table
+        if(it != mp.end()) 
         {
-            it->second->value = v; // update value
+            it->second->value = v; 
             
-            if(head == it->second) //head?
+            if(head == it->second) 
                 return;
             
             it->second->prev->next = it->second->next;
             
-            if(tail == it->second) //tail?
+            if(tail == it->second) 
                 tail = tail->prev;
-            else                   //in between?
+            else                  
                 it->second->next->prev = it->second->prev;
             
             it->second->next = head;
@@ -67,14 +67,14 @@ class LRUCache: public Cache
             head->prev = it->second;
             head = it->second;
         }
-        else               // No in hash table
+        else               
         {
-            N = new Node(head->prev,head,k,v); //new node
+            N = new Node(head->prev,head,k,v);
             head->prev = N; 
             head = N;
             mp[k] = N;
             
-            if(mp.size() > cp) //capacity?
+            if(mp.size() > cp)
             {
                 tail = tail->prev;
                 mp.erase(tail->next->key);
