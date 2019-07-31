@@ -31,7 +31,9 @@ class Cache{
 class LRUCache: public Cache
 {
     public:
-    LRUCache(int c): cp(c) {}
+    LRUCache(int c){
+        cp = c;
+    }
     
     void set(int k,int v)
     {
@@ -40,8 +42,7 @@ class LRUCache: public Cache
         if(mp.empty())
         {
             N = new Node(k,v);
-            tail = head = N;
-            mp[k] = N;
+            mp[k] = tail = head = N;
             
             return;
         }
@@ -64,15 +65,13 @@ class LRUCache: public Cache
             
             it->second->next = head;
             it->second->prev = NULL;
-            head->prev = it->second;
-            head = it->second;
+            head = head->prev = it->second;
+            
         }
         else               
         {
             N = new Node(head->prev,head,k,v);
-            head->prev = N; 
-            head = N;
-            mp[k] = N;
+            mp[k] = head = head->prev = N; 
             
             if(mp.size() > cp)
             {
