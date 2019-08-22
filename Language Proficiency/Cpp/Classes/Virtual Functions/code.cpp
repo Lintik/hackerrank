@@ -5,6 +5,57 @@
 #include <algorithm>
 using namespace std;
 
+class Person{
+public:
+    string name;
+    int age;
+    virtual void getdata(){
+        cin >> name >> age;
+    }
+    virtual void putdata(){
+        cout << name << " " << age << endl;
+    }
+};
+
+class Professor: public Person{
+public:
+    Professor(){
+        cur_id = id++;
+    }
+    int publications;
+    static int id;
+    int cur_id;
+    void getdata() {
+        cin >> name >> age >> publications;
+    }
+    void putdata() {
+        cout << name << " " << age << " " << publications << " " << cur_id << endl;     
+    }
+};
+
+class Student: public Person{
+public:
+    Student(){
+        cur_id = id++;
+    }
+    int marks[6];
+    static int id;
+    int cur_id;
+    void getdata(){
+        cin >> name >> age;
+        for(int i = 0; i < 6; i++)
+            cin >> marks[i];
+    }
+    void putdata(){
+        int markSum = 0;
+        for (int i = 0; i < 6; i++)
+        markSum += marks[i];
+        cout << name << " " << age << " " << markSum << " " << cur_id << endl;
+    }
+};
+int Professor::id = 1;
+int Student::id = 1;
+
 int main(){
 
     int n, val;

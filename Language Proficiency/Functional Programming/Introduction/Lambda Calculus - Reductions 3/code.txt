@@ -1,0 +1,8 @@
+((λx.(x x))(λx.(x x))) 
+
+= (λx.(x x)) (λx.(x x)) 
+= (λx.(x x)) (λy.(y y)) 
+= (λy.(y y)) (λy.(y y))
+= ...
+
+CAN'T REDUCE
