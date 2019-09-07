@@ -4,7 +4,7 @@ using System.IO;
 
 class Solution {
 
-    static float Median(int[] count,int d){
+    static float median(int[] count,int d){
         int d2 = (d+1)/2;
         for (int i = 0; i < count.Length; i++){
             if (count[i] > d2) return i;
@@ -25,7 +25,7 @@ class Solution {
         for (int i = 0; i < n; i++){
             int v = a[i];
             if (i >= d){
-                var m = Median(count, d);
+                var m = median(count, d);
                 if (v >= 2*m)
                     result++;
                 count[a[i - d]]--;
