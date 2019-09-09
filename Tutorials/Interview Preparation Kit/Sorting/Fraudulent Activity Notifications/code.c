@@ -17,26 +17,25 @@ int median(int* count, int d){
 
 int activityNotifications(int n, int* a, int d) {
     int result = 0;
-        int count[201] = {0};
+    int count[201] = {0};
 
-        for (int i = 0; i < n; i++){
-            int v = a[i];
-            if (i >= d){
-                int m = median(count, d);
-                if (v >= m) result++;
-                count[a[i - d]]--;
-            }
-            count[v]++;
+    for (int i = 0; i < n; i++){
+        int v = a[i];
+        if (i >= d){
+            int m = median(count, d);
+            if (v >= m) result++;
+            count[a[i - d]]--;
         }
-        return result;
+        count[v]++;
+    }
+    return result;
 }
 
-int main()
-{
+int main(){
     int n, d;
     scanf("%d", &n);
     scanf("%d", &d);
-    int* a = (int *) malloc(n);
+    int* a = malloc(n * sizeof(int));
     for(int i =0; i < n;i++)
         scanf("%d", &a[i]);
     int r = activityNotifications(n, a, d);
