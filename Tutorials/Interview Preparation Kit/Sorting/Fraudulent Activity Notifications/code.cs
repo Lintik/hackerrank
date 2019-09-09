@@ -26,8 +26,7 @@ class Solution {
             int v = a[i];
             if (i >= d){
                 var m = median(count, d);
-                if (v >= 2*m)
-                    result++;
+                if (v >= 2*m) result++;
                 count[a[i - d]]--;
             }
             count[v]++;
