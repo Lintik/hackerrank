@@ -21,7 +21,28 @@ class Solution {
 
     static int[] merge(int[] l1, int[] l2, int count){
         int[] c = new int[l1.Length +l2.Length ];
-        for()
+        int i, j, k = 0;
+        for(;i < l1.Length && j < l2.length;k++){
+            if(l1[i] > l2[j]){
+                c[k] = l2[j];
+                j++;
+                count++;
+            }
+            else{
+                c[k] = l1[i];
+                i++;
+            }
+        }
+        while(i < l1.Length){
+            c[k] = l1[i];
+            i++;
+            k++;
+        }
+        while(j < l2.length){
+            c[k] = l2[j];
+            j++;
+            k++;
+        }
     }
 
     static void Main(string[] args) {
