@@ -11,12 +11,13 @@ class Solution {
     }
 
     static int[] mergeSort(int[] arr){
-        if(arr.Length == 1) return arr
-        int[] l1 = Array.Take(arr.Length/2 +1);
-        int[] l2 = Array.Skip(arr.Length/2 +1));
+        if(arr.Length == 1) return arr;
+        int l = Math.Ceiling(arr.Length / 2);
+        int[] l1 = new int[l];
+        int[] l2 = new int[arr.length / 2];
         mergeSort(l1);
-        mergeSort(l2));
-        merge(l1,l2)
+        mergeSort(l2);
+        return merge(l1,l2);
     }
 
     static int[] merge(int[] l1, int[] l2, int count){
@@ -43,14 +44,16 @@ class Solution {
             j++;
             k++;
         }
+        return c;
     }
 
     static void Main(string[] args) {
-        int d = Convert.ToInt32(Console.Readline());
+        int d = Convert.ToInt32(Console.ReadLine());
         for(int i = 0;i<d;i++){
-            int n = Convert.ToInt32(Console.Readline());
+            int n = Convert.ToInt32(Console.ReadLine());
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-            Console.WriteLint(countInversions(arr));
+            countInversions(arr);
+            Console.WriteLine(count);
         }
     }
 }
