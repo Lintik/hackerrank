@@ -8,8 +8,6 @@ class Solution {
     static long count = 0;
     static void countInversions(int[] arr) {
         int[] a = mergeSort(arr);
-        //foreach(int i in a)
-        //    Console.WriteLine(i);
     }
 
     static int[] mergeSort(int[] arr){
@@ -17,6 +15,7 @@ class Solution {
         int l = arr.Length / 2;
         int[] l1 = new int[l];
         int[] l2 = new int[arr.Length - l];
+
         for(int i = 0;i<l;i++)
             l1[i] = arr[i];
         for(int i = 0;i < arr.Length - l;i++)
@@ -51,6 +50,7 @@ class Solution {
         int d = Convert.ToInt32(Console.ReadLine());
         for(int i = 0;i<d;i++){
             int n = Convert.ToInt32(Console.ReadLine());
+            count = 0;
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
             countInversions(arr);
             Console.WriteLine(count);
