@@ -8,8 +8,8 @@ class Solution {
     static long count = 0;
     static void countInversions(int[] arr) {
         int[] a = mergeSort(arr);
-        foreach(int i in a)
-            Console.WriteLine(i);
+        //foreach(int i in a)
+        //    Console.WriteLine(i);
     }
 
     static int[] mergeSort(int[] arr){
@@ -27,29 +27,23 @@ class Solution {
     }
 
     static int[] merge(int[] l1, int[] l2){
-        int[] c = new int[l1.Length +l2.Length ];
+        int[] c = new int[l1.Length + l2.Length];
         int i = 0, j = 0, k = 0;
-        for(;i < l1.Length && j < l2.Length;k++){
+        while(i < l1.Length && j < l2.Length){
             if(l1[i] > l2[j]){
-                c[k] = l2[j];
-                j++;
-                count += l1.Length + 1 - i;
-            }
+                c[k++] = l2[j++];
+                count += l1.Length - i;
+            } 
             else{
-                c[k] = l1[i];
-                i++;
+                c[k++] = l1[i++];
             }
         }
-        while(i < l1.Length){
-            c[k] = l1[i];
-            i++;
-            k++;
-        }
-        while(j < l2.Length){
-            c[k] = l2[j];
-            j++;
-            k++;
-        }
+        while(i < l1.Length)
+            c[k++] = l1[i++];
+        
+        while(j < l2.Length)
+            c[k++] = l2[j++];
+
         return c;
     }
 
