@@ -30,8 +30,10 @@ vector<int> mergeSort(vector<int> arr){
     vector<int> l1(l);
     vector<int> l2(arr.size() - l);
 
-    copy(arr.begin(), arr.begin() + l, l1);
-    copy(arr.begin() + l + 1, arr.end(), l2);
+    for(int i = 0;i < l;i++)
+        l1[i] = arr[i];
+    for(int i = 0;i <l2.size();i++)
+        l2[i] = arr[l + i];
 
     l1 = mergeSort(l1);
     l2 = mergeSort(l2);
