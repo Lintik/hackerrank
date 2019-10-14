@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long count = 0;
+long count_s = 0;
 
 vector<int> merge(vector<int> l1, vector<int> l2, int l){
     vector<int> c(l);
@@ -9,7 +9,7 @@ vector<int> merge(vector<int> l1, vector<int> l2, int l){
     while(i < l1.size() && j < l2.size()){
         if(l1[i] > l2[j]){
             c[k++] = l2[j++];
-            count += l1.size() - i;
+            count_s += l1.size() - i;
         } 
         else{
             c[k++] = l1[i++];
@@ -50,7 +50,7 @@ int main()
 
     for (int i = 0;i < t;i++) {
         int n;
-        count = 0;
+        count_s = 0;
         cin >> n;
         vector<int> a(n);
         for(int j = 0;j < n;j++){
@@ -58,7 +58,7 @@ int main()
         }
 
         countInversions(a);
-        cout << count << endl;
+        cout << count_s << endl;
     }
     return 0;
 }
