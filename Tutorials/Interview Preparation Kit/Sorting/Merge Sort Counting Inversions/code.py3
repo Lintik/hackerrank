@@ -1,11 +1,14 @@
 #!/bin/python3
 
+
 import os
 
 def merge(l1,l2):
     global count
     c = [0] * (len(l2) + len(l1))
-    i = j = k = 0
+    i = 0
+    j = 0
+    k = 0
     while i < len(l1) and j < len(l2):
         if l1[i] > l2[j]:
             c[k] = l2[j]
@@ -35,6 +38,8 @@ def mergeSort(arr):
     l = len(arr) // 2
     l1 = arr[:l]
     l2 = arr[l:]
+    l1 = mergeSort(l1)
+    l2 = mergeSort(l2)
     return merge(l1,l2)
 
 def countInversions(arr):
