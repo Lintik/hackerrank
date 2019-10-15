@@ -1,15 +1,33 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
-
-count = 0
 
 def merge(l1,l2):
+    global count
+    c = [0] * (len(l2) + len(l1))
+    i = j = k = 0
+    while i < len(l1) and j < len(l2):
+        if l1[i] > l2[j]:
+            c[k] = l2[j]
+            j += 1
+            count += len(l1) - i
+        else:
+            c[k] = l1[i]
+            i += 1
+        k += 1
+        
+    while i < len(l1):
+        c[k] = l1[i]
+        k+=1
+        i+=1
     
+    while j < len(l2):
+        c[k] = l2[j]
+        k+=1
+        j+=1
+
+    return c
+
 
 def mergeSort(arr):
     if len(arr) == 1: 
@@ -23,6 +41,7 @@ def countInversions(arr):
     a = mergeSort(arr)
 
 if __name__ == '__main__':
+    global count
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     t = int(input())
