@@ -1,56 +1,59 @@
-#!/bin/python3
+using System.IO;
+using System.Collections;
+using System.Linq;
+using System;
 
-import os
+class Solution {
 
-def merge(l1,l2):
-    global count
-    c = [0] * (len(l2) + len(l1))
-    i = j = k = 0
-    while i < len(l1) and j < len(l2):
-        if l1[i] > l2[j]:
-            c[k] = l2[j]
-            j += 1
-            count += len(l1) - i
-        else:
-            c[k] = l1[i]
-            i += 1
-        k += 1
+    static long count = 0;
+    static void countInversions(int[] arr) {
+        int[] a = mergeSort(arr);
+    }
+
+    static int[] mergeSort(int[] arr){
+        if(arr.Length == 1) return arr;
+        int l = arr.Length / 2;
+        int[] l1 = new int[l];
+        int[] l2 = new int[arr.Length - l];
+
+        for(int i = 0;i<l;i++)
+            l1[i] = arr[i];
+        for(int i = 0;i < arr.Length - l;i++)
+            l2[i] = arr[i+l];
+        l1 = mergeSort(l1);
+        l2 = mergeSort(l2);
+        return merge(l1,l2);
+    }
+
+    static int[] merge(int[] l1, int[] l2){
+        int[] c = new int[l1.Length + l2.Length];
+        int i = 0, j = 0, k = 0;
+        while(i < l1.Length && j < l2.Length){
+            if(l1[i] > l2[j]){
+                c[k++] = l2[j++];
+                count += l1.Length - i;
+            } 
+            else{
+                c[k++] = l1[i++];
+            }
+        }
+        while(i < l1.Length)
+            c[k++] = l1[i++];
         
-    while i < len(l1):
-        c[k] = l1[i]
-        k+=1
-        i+=1
-    
-    while j < len(l2):
-        c[k] = l2[j]
-        k+=1
-        j+=1
+        while(j < l2.Length)
+            c[k++] = l2[j++];
 
-    return c
+        return c;
+    }
 
-
-def mergeSort(arr):
-    if len(arr) == 1: 
-        return arr
-    l = len(arr) // 2
-    l1 = arr[:l]
-    l2 = arr[l:]
-    return merge(l1,l2)
-
-def countInversions(arr):
-    a = mergeSort(arr)
-
-if __name__ == '__main__':
-    global count
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    t = int(input())
-
-    for t_itr in range(t):
-        n = int(input())
-        arr = list(map(int, input().rstrip().split()))
-        count = 0
-        countInversions(arr)
-        fptr.write(str(count) + '\n')
-
-    fptr.close()
+    static void Main(string[] args) {
+        int d = Convert.ToInt32(Console.ReadLine());
+        for(int i = 0;i<d;i++){
+            int n = Convert.ToInt32(Console.ReadLine());
+            count = 0;
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            countInversions(arr);
+            Console.WriteLine(count);
+        }
+    }
+}
