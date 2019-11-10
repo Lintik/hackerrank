@@ -2,7 +2,11 @@ import java.io.*
 import java.util.*
 
 fun simpleArraySum(ar: Array<Int>): Int {
-    return ar.sum()
+    //built in sum()
+    //return ar.sum()
+    
+    //stream fold()
+    return ar.fold(0) { acc, e -> acc + e }
 }
 
 fun main(args: Array<String>) {
