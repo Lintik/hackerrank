@@ -6,7 +6,14 @@ import java.util.Arrays
 // Complete the reverseArray function below.
 fun reverseArray(a: Array<Int>): Array<Int> {
     //using reversedArray()
-    return a.reversedArray()
+    //Reverse an array and create one different array
+    //return a.reversedArray()
+    
+    //using reverse()
+    //Reverse an array in place
+    a.reverse()
+    return a
+
 }
 
 fun main(args: Array<String>) {
