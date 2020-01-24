@@ -4,8 +4,15 @@
 #include <algorithm>
 using namespace std;
 
-void setSTL(set<int> &s, int y, int x){
-    
+void setsSTL(set<int> &s, int y, int x){
+    if(y==1)
+        s.insert(x);
+    else if(y==2)
+        s.erase(x);
+    else if(s.find(x) - s.begin() < s.end() - s.begin()){
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
 }
 
 int main(){
@@ -13,9 +20,8 @@ int main(){
     cin >> Q;
     set<int> s;
     for(int i = 0;i < Q;i++){
-        int y = 0;
-        cin >> y;
-        int x = 0;
-        cin >> x;
+        int y = 0, x = 0;
+        cin >> y >> x;
+        setsSTL(s,y,x);
     }
 }
