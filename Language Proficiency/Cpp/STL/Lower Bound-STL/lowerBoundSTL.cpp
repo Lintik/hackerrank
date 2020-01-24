@@ -4,13 +4,14 @@
 #include <string>
 using namespace std;
 
+//pass the vector by reference to meet speed requirements
 string lowerBound(vector<int> &v, int y){
     int i = 0;
     i = lower_bound(v.begin(), v.end(),y) - v.begin();
     if(v[i] == y)
-        return "Yes " + to_string(i);
+        return "Yes " + to_string(i + 1);//off by one
     else
-        return "No " + to_string(i);
+        return "No " + to_string(i + 1);
     
 }
 
