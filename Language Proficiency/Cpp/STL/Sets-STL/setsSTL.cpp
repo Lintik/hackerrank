@@ -9,7 +9,7 @@ void setsSTL(set<int> &s, int y, int x){
         s.insert(x);
     else if(y==2)
         s.erase(x);
-    else if(s.find(x) - s.begin() < s.end() - s.begin()){
+    else if(s.find(x) - s.begin() < s.end() - s.begin())
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
