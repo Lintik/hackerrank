@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-string lowerBound(vector<int> v, int y){
+string lowerBound(vector<int> &v, int y){
     int i = 0;
     i = lower_bound(v.begin(), v.end(),y) - v.begin();
     if(v[i] == y)
