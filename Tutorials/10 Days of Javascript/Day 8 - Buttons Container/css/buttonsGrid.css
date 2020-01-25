@@ -1,0 +1,12 @@
+#btns {
+     display: block;
+     overflow: hidden;
+     width: 75%;
+}
+#btns button {
+     display: block;
+     width: 30%;
+     float: left;
+     height: 48px;
+     font-size: 24px;    
+}
