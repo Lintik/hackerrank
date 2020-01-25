@@ -4,7 +4,11 @@
 #include <map>
 using namespace std;
 
-void mapDelete(map<string, int> &m){
+void mapDisplay(map<string, int> &m){
+
+}
+
+void mapDelete(map<string, int> &m, string name){
 
 }
 
@@ -22,7 +26,13 @@ int main(){
         cin >> x >> name;
         if(x == 1){
             cin >> y;
-
+            mapInsert(m, y);
         }
+        else if(x == 2)
+            mapDelete(m, name);
+        else
+            mapDisplay(m);
+        
+        
     }
 }
