@@ -31,9 +31,9 @@ function readLine() {
  */
 function isPositive(a) {
     if (a == 0)
-        throw new Error("Zero Error");
+        return "Zero Error";
     else if (a < 0)
-        throw new Error("Negative Error");
+        return "Negative Error";
     else
         return "YES";
 }
