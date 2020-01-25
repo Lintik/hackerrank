@@ -1,8 +1,12 @@
 #include <iostream>
 #include <deque>
+using namespace std;
 
 void printKMax(int arr[], int n, int k){
-
+    deque<int> dq;
+    for(int i = 0;i < k;i++){
+        
+    }
 }
 
 int main(){
