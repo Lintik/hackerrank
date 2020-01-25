@@ -4,16 +4,18 @@
 #include <map>
 using namespace std;
 
-void mapDisplay(map<string, int> &m){
-
+void mapDisplay(map<string, int> &m, string name){
+    cout << m[name];
+    cout << endl;
 }
 
 void mapDelete(map<string, int> &m, string name){
-
+    m[name] = 0;
 }
 
-void mapInsert(map<string, int> &m, int x){
-
+void mapInsert(map<string, int> &m, string name, int x){
+    m.insert(pair<string,int>(name,0));
+    m[name] += x;
 }
 
 int main(){
@@ -26,12 +28,12 @@ int main(){
         cin >> x >> name;
         if(x == 1){
             cin >> y;
-            mapInsert(m, y);
+            mapInsert(m, name, y);
         }
         else if(x == 2)
             mapDelete(m, name);
         else
-            mapDisplay(m);
+            mapDisplay(m, name);
         
         
     }
