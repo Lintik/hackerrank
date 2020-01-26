@@ -13,7 +13,7 @@ void printKMax(vector<int> &arr, int n, int k){
     }
     cout << m;
     for(int i = 1;i < n - k + 1;i++){
-        if(arr[i] == m){
+        if(dq[0] == m){
             m = 0;
             dq.pop_front();
             dq.push_back(arr[i]);
