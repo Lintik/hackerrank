@@ -42,9 +42,8 @@ int main(){
 	while(t>0) {
 		int n,k;
     	cin >> n >> k;
-    	int i;
     	vector<int> arr(n);
-    	for(i=0;i<n;i++)
+    	for(int i = 0;i < n;i++)
       		cin >> arr[i];
     	printKMax(arr, n, k);
     	t--;
