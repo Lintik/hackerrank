@@ -16,20 +16,20 @@ void printKMax(vector<int> &arr, int n, int k){
         if(dq[0] == m){
             m = 0;
             dq.pop_front();
-            dq.push_back(arr[i]);
+            dq.push_back(arr[i+k-1]);
             for(int j = 0;j < k;j++){
                 if(dq[j] > m)
                     m = dq[j];
             }
         }
-        if(arr[i+k-1] >= m){
-            m = arr[i];
+        if(arr[i+k-1] > m){
+            m = arr[i+k-1];
             dq.pop_front();
-            dq.push_back(arr[i]);
+            dq.push_back(arr[i+k-1]);
         }
         else{
             dq.pop_front();
-            dq.push_back(arr[i]);
+            dq.push_back(arr[i+k-1]);
         }
         cout << " " << m;
     }
