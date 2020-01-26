@@ -12,8 +12,8 @@ void printKMax(vector<int> &arr, int n, int k){
             m = arr[i];
     }
     cout << m;
-    for(int i = k;i < n;i++){
-        if(arr[i-k] == m){
+    for(int i = 1;i < n - k + 1;i++){
+        if(arr[i] == m){
             m = 0;
             dq.pop_front();
             dq.push_back(arr[i]);
@@ -22,7 +22,7 @@ void printKMax(vector<int> &arr, int n, int k){
                     m = dq[j];
             }
         }
-        if(arr[i] >= m){
+        if(arr[i+k-1] >= m){
             m = arr[i];
             dq.pop_front();
             dq.push_back(arr[i]);
