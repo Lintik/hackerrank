@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+class AddElements{
+
+};
+
 int main () {
   int n,i;
   cin >> n;
