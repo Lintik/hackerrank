@@ -1,9 +1,29 @@
-#include <iostream>
 #include <vector>
+#include <iostream>
 using namespace std;
 
-class AddElements{
+int start_up() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    return 0;
+}
 
+int static r = start_up();
+
+#define endl '\n';
+
+template <class T> class AddElements {
+    public:
+        T element;
+        AddElements(T i) {
+            element = i;
+        }
+        T add(T i) {
+            return element+i;
+        }
+        T concatenate(T i) {
+            return element+i;
+        }
 };
 
 int main () {
