@@ -11,10 +11,10 @@ class Complex{
                 v1 = v1 * 10 + s[i] - '0';
                 i++;
             }
-            while(s[i]==' ' || s[i]=='+'||s[i]=='i')
+            while(s[i] == ' ' || s[i] == '+' || s[i] == 'i')
                 i++;
 
-            int v2=0;
+            int v2 = 0;
             while(i<s.length()){
                 v2=v2*10+s[i]-'0';
                 i++;
