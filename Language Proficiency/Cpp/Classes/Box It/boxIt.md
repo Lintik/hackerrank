@@ -29,4 +29,6 @@ __*cout* << B__ should print __B.*l*__, __B.*b*__ and __B.*h*__ on a single line
 
 __Constraints__
 
-Two boxes being compared using the operator will not have all three dimensions equal.
+> 0 &le; __*l*__, __*b*__, __*h*__ &le; 10<sup>5<sup/>
+
+Two boxes being compared using the operator &lt; will not have all three dimensions equal.
