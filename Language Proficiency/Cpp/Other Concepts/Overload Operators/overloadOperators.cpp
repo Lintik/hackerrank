@@ -34,12 +34,12 @@ Complex operator+(const Complex& a, const Complex& b) {
 
 int main()
 {
-    Complex x,y;
-    string s1,s2;
-    cin>>s1;
-    cin>>s2;
+    Complex x, y;
+    string s1, s2;
+    cin >> s1;
+    cin >> s2;
     x.input(s1);
     y.input(s2);
-    Complex z=x+y;
-    cout<<z<<endl;
+    Complex z = x + y;
+    cout << z << endl;
 }
