@@ -36,5 +36,3 @@ Invalid
 **Explanation**
 
 Username `Me` is too short because it only contains __2__ characters, so your exception prints __Too short: 2__. All other validation is handled by the locked code in your editor.
-
-
