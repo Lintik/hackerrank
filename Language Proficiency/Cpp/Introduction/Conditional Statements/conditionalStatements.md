@@ -28,7 +28,7 @@ else {
 }
 ```
 
-3. if - else if - else: In this structure, dependent statements are chained together and the for each statement is only checked if all prior conditions in the chain evaluated to false. Once a evaluates to true, the bracketed code associated with that statement is executed and the program then skips to the end of the chain of statements and continues executing. If each in the chain evaluates to false, then the body of bracketed code in the else block at the end is
+3. *if* - *else* *if* - *else*: In this structure, dependent statements are chained together and the __*condition*__ for each statement is only checked if all prior conditions in the chain evaluated to *false*. Once a __*condition*__ evaluates to *true*, the bracketed code associated with that statement is executed and the program then skips to the end of the chain of statements and continues executing. If each __*condition*__ in the chain evaluates to *false*, then the body of bracketed code in the else block at the end is
 executed.
 
 ```c++
@@ -48,24 +48,23 @@ else {
     ...
 }
 ```
-Given a positive integer denoting , do the following:
 
-```
-If , then print the lowercase English word corresponding to the number (e.g., one for ,
-two for , etc.).
-If , print Greater than 9.
-```
+Given a positive integer denoting __*n*__, do the following:
+
+* If __1 &le; *n* &le; 9__, then print the lowercase English word corresponding to the number (e.g., `one` for __1__, `two` for __2__, etc.).
+* If __n &gt; 9__, print `Greater than 9`.  
+
 **Input Format**
 
 
-A single integer denoting.
+A single integer denoting __*n*__.
 
-**Constraints**
+**Constraints**  
+* __1 &le; *n* &le; 10<sup>9</sup>__
 
 **Output Format**
 
-If , then print the lowercase English word corresponding to the number (e.g., one for , two
-for , etc.); otherwise, print Greater than 9 instead.
+If __1 &le; *n* &le; 9__, then print the lowercase English word corresponding to the number (e.g., `one` for __1__, `two` for __2__, etc.); otherwise, print `Greater than 9` instead.
 
 **Sample Input 0**
 
@@ -79,9 +78,8 @@ five
 ```
 **Explanation 0**
 
-```
-five is the English word for the number.
-```
+`five` is the English word for the number __5__.
+
 **Sample Input 1**
 
 ```
@@ -94,9 +92,8 @@ eight
 ```
 **Explanation 1**
 
-```
-eight is the English word for the number.
-```
+* `eight` is the English word for the number __8__.
+
 **Sample Input 2**
 
 ```
@@ -109,7 +106,6 @@ Greater than 9
 ```
 **Explanation 2**
 
-```
-is greater than , so we print Greater than 9.
-```
+__*n* = 44__ is greater than __9__, so we print `Greater than 9`.
+
 
