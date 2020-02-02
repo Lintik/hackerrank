@@ -20,9 +20,9 @@ If the object is of the *Student* class, you will have to input the *name*, *age
 
 **Constraints**
 
-> __1 &le; *len*<sub>*name*</sub> &le; 100__, where len<sub>name</sub> is the length of the name.
-__1 &le; *age* &le; 80__
-__1 &le; *publications* &le; 1000__
+> __1 &le; *len*<sub>*name*</sub> &le; 100__, where len<sub>name</sub> is the length of the name.  
+__1 &le; *age* &le; 80__  
+__1 &le; *publications* &le; 1000__  
 __0 &le; *marks* &le; 100__, where marks is the marks of the student in each subject.
 
 **Output Format**
