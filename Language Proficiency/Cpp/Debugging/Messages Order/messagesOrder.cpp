@@ -6,13 +6,21 @@ using namespace std;
 
 class Message {
 private:
-    const int id;
-    const string text;
+    int id;
+    string text;
 public: 
     Message(int i, string s): id(i), text(s) {}
     const string& get_text() {
         return text;
     }
+
+    bool operator < (const Message& M2) {
+        if(id < M2.id)
+            return true;
+        else
+            return false;
+    }
+};
 class MessageFactory {
 private:
     int id;
@@ -21,7 +29,7 @@ public:
         id = 0;
     }
     Message create_message(const string& text) {
-        Message new_message(id, text);
+        Message new_message = Message(id, text);
         id++;
         return new_message;
     }
