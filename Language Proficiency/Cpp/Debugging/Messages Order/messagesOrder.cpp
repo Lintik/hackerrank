@@ -5,18 +5,25 @@
 using namespace std;
 
 class Message {
+private:
+    const int id;
+    const string text;
 public: 
-    Message() {}
+    Message(int i, string s): id(i), text(s) {}
     const string& get_text() {
-        
+        return text;
     }
-};
-
 class MessageFactory {
+private:
+    int id;
 public:
-    MessageFactory() {}
+    MessageFactory() {
+        id = 0;
+    }
     Message create_message(const string& text) {
-        
+        Message new_message(id, text);
+        id++;
+        return new_message;
     }
 };
 
