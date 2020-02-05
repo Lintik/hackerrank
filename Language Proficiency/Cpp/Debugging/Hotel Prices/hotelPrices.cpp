@@ -8,9 +8,10 @@ public:
     HotelRoom(int bedrooms, int bathrooms) 
     : bedrooms_(bedrooms), bathrooms_(bathrooms) {}
     
-    int virtual get_price() {
+    virtual int get_price() {
         return 50*bedrooms_ + 100*bathrooms_;
     }
+
 private:
     int bedrooms_;
     int bathrooms_;
