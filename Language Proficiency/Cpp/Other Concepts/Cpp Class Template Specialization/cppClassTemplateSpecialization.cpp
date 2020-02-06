@@ -3,6 +3,7 @@ using namespace std;
 enum class Fruit { apple, orange, pear };
 enum class Color { red, green, orange };
 
+template <typename T> struct Traits;
 template <typename T>
 struct Traits
 {
