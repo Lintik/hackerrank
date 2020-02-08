@@ -1,10 +1,7 @@
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
+class Solution {
 
     static int simpleArraySum(int n, int[] ar) {
         // Complete this function
@@ -24,5 +21,6 @@ public class Solution {
         }
         int result = simpleArraySum(n, ar);
         System.out.println(result);
+        in.close();
     }
 }
