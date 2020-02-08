@@ -1,10 +1,6 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
+class Solution {
 
     static int solveMeFirst(int a, int b) {
          // Hint: Type return a+b; below
@@ -20,5 +16,6 @@ public class Solution {
         int sum;
         sum = solveMeFirst(a, b);
         System.out.println(sum);
+        in.close();
    }
 }
