@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 class Solution {
 
+    //pass long array and sum all the elements
     static long aVeryBigSum(int n, long[] ar) {
-        // Complete this function
         return ar.Sum();
     }
 
