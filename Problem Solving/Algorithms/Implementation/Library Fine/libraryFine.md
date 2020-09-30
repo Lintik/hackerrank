@@ -17,4 +17,4 @@ libraryFine has the following parameter(s):
 
 __Input Format__
 
-The first line contains __3_ space-separated integers, 
+The first line contains __3__ space-separated integers, __*d*1__, __*m*1__, __*y*2__, denoting the respective __*day*__, __*month*__, and __*year*__ on which the book was returned. 
