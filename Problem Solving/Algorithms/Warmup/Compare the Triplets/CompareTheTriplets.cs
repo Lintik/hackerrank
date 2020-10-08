@@ -7,12 +7,16 @@ class Solution {
     static int[] solve(int a0, int a1, int a2, int b0, int b1, int b2){
         // Complete this function
         int[] r = new int[2]{0,0};
+
         if(a0 > b0) r[0]++;
         else if(a0 < b0) r[1]++;
+
         if(a1 > b1) r[0]++;
         else if(a1 < b1) r[1]++;
+
         if(a2 > b2) r[0]++;
         else if(a2 < b2) r[1]++;
+        
         return r;
     }
 
