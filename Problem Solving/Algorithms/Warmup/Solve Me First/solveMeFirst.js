@@ -19,7 +19,7 @@ function readLine() {
 }
 
 function solveMeFirst(a, b) {
-  return a + b;  
+    return a + b;  
 }
 
 
