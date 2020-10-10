@@ -3,13 +3,13 @@ import java.text._
 object Solution {
 
     // Complete the compareTriplets function below.
-    def compareTriplets(a: Array[Int], b: Array[Int]) = {
+    def compareTriplets(alice: Array[Int], bob: Array[Int]) {
         val (alicePoints, bobPoints) = alice.zip(bob).map { case (a, b) =>
             if (a > b) (1, 0)
             else if (b > a) (0, 1)
             else (0, 0)
             }.unzip
-            println(s"${alicePoints.sum} ${bobPoints.sum}")      
+        println(s"${alicePoints.sum} ${bobPoints.sum}")      
         
     }
 
