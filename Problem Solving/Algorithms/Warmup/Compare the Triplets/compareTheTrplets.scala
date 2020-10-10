@@ -3,7 +3,13 @@ import java.text._
 object Solution {
 
     // Complete the compareTriplets function below.
-    def compareTriplets(a: Array[Int], b: Array[Int]): Array[Int] = {
+    def compareTriplets(a: Array[Int], b: Array[Int]) = {
+        val (alicePoints, bobPoints) = alice.zip(bob).map { case (a, b) =>
+            if (a > b) (1, 0)
+            else if (b > a) (0, 1)
+            else (0, 0)
+            }.unzip
+            println(s"${alicePoints.sum} ${bobPoints.sum}")      
         
     }
 
@@ -14,9 +20,5 @@ object Solution {
 
         val b = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
         val result = compareTriplets(a, b)
-
-        printWriter.println(result.mkString(" "))
-
-        printWriter.close()
     }
 }
