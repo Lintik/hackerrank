@@ -2,18 +2,19 @@ import java.io._
 import java.text._
 
 object Solution extends App {
-    val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
-
-    val lines = io.Source.stdin.getLines()
-    val total = lines.next().split(" ").map(_.toInt).zip(lines.next().split(" ").map(_.toInt)).fold((0,0)){ case (acc, pair) =>
-    if(pair._1 > pair._2)
-        (acc._1+1, acc._2)
-    else if(pair._1 < pair._2)
-        (acc._1, acc._2+1)
-    else
-        acc
+    def main(args: Array[String]) {
+        val sc = new java.util.Scanner (System.in);
+        var a0 = sc.nextInt();
+        var a1 = sc.nextInt();
+        var a2 = sc.nextInt();
+        var b0 = sc.nextInt();
+        var b1 = sc.nextInt();
+        var b2 = sc.nextInt();
+        var alice = 0;
+        var bob = 0;
+        if (a0 > b0) alice += 1 else if (b0 > a0) bob += 1 else alice = alice
+        if (a1 > b1) alice += 1 else if (b1 > a1) bob += 1 else alice = alice
+        if (a2 > b2) alice += 1 else if (b2 > a2) bob += 1 else alice = alice
+        println (alice + " " + bob)
     }
-    
-    printWriter.println(s"${total._1} ${total._2}")
-    printWriter.close()
 }
