@@ -22,8 +22,8 @@
 
 ### [Language Proficiency](https://github.com/Lintik/hackerrank/tree/master/Language%20Proficiency)
 
-- [C]()
-- [C++]()
-- [Java]()
-- [Linux Shell]()
-- [Python]()
+- [C](https://github.com/Lintik/hackerrank/tree/master/Language%20Proficiency/C)
+- [C++](https://github.com/Lintik/hackerrank/tree/master/Language%20Proficiency/Cpp)
+- [Java](https://github.com/Lintik/hackerrank/tree/master/Language%20Proficiency/Java)
+- [Linux Shell](https://github.com/Lintik/hackerrank/tree/master/Language%20Proficiency/Linux%20Shell)
+- [Python](https://github.com/Lintik/hackerrank/tree/master/Language%20Proficiency/Python)
