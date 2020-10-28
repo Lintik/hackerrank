@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-### [Problem Solving](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving)
+### [Core CS](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving)
 
 - [Algorithms](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving/Algorithms)
 - [Data Structure](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving/Data%20Structure)
