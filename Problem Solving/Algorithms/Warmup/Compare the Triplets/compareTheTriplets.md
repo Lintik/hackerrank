@@ -75,5 +75,5 @@ __Sample Output 1__
 
 __Explanation 1__
 
-Comparing  the __0<sup>*th*</sup>__ elements, __17 &lt; 99__ so Bob receives a point. Comparing the __1<sup>*st*</sup>__ and __2<sup>*nd*</sup>__ elements, __28 &gt; 8__ and so Alice receives two points.
+Comparing  the __0<sup>*th*</sup>__ elements, __17 &lt; 99__ so Bob receives a point. Comparing the __1<sup>*st*</sup>__ and __2<sup>*nd*</sup>__ elements, __28 &gt; 8__ and so Alice receives two points.  
 The return array is __[2,1]__. 
