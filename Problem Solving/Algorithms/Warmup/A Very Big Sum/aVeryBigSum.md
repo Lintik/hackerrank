@@ -19,9 +19,9 @@ __Output Format__
 
 Return the integer sum of the elements in the array.
 
-__Constraints__
-* *1 &#8806; n &#8806; 10*
-* *0 &#8806; ar[i] &#8806; 10<sup>10</sup>*
+__Constraints__  
+#### __1 &#8806; *n* &#8806; 10__  
+#### __0 &#8806; *ar*[*i*] &#8806; 10<sup>10</sup>__
  
 
 __Sample Input__
