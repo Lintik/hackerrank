@@ -8,6 +8,7 @@ object Solution {
         //return ar.reduceLeft(_+_)
         //foldLeft has initial value
         return ar.foldLeft(0l)(_+_)
+        //return ar.sum
     }
 
     def main(args: Array[String]) {
