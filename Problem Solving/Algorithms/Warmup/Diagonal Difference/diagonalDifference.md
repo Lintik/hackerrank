@@ -12,7 +12,7 @@ The left-to-right diagonal = __1 + 5 + 9 = 15__. The right to left diagonal = __
 
 __Function description__
 
-Complete the ___diagonalDiffence__ function in the editor below.  
+Complete the ___diagonalDiffence___ function in the editor below.  
 diagonalDifference takes the following parameter: 
 - int arr[n][m]: an array of integers
 
