@@ -4,9 +4,9 @@
 
 ### [Core CS](https://github.com/Lintik/hackerrank/tree/master/Core%20CS)
 
-- [Algorithms](https://github.com/Lintik/hackerrank/tree/masterCore%20CS/Algorithms)
-- [Data Structure](https://github.com/Lintik/hackerrank/tree/masterCore%20CS/Data%20Structure)
-- [Mathematics](https://github.com/Lintik/hackerrank/tree/masterCore%20CS/Mathematics)
+- [Algorithms](https://github.com/Lintik/hackerrank/tree/master/Core%20CS/Algorithms)
+- [Data Structure](https://github.com/Lintik/hackerrank/tree/master/Core%20CS/Data%20Structure)
+- [Mathematics](https://github.com/Lintik/hackerrank/tree/master/Core%20CS/Mathematics)
 
 ### [Tutorials](https://github.com/Lintik/hackerrank/tree/master/Tutorials)
 
