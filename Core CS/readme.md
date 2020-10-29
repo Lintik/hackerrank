@@ -1,4 +1,4 @@
-# CORE CS
+## CORE CS
 
 
 ### [Algorithms](https://github.com/Lintik/hackerrank/tree/master/CORE%20CS/Algorithms)
