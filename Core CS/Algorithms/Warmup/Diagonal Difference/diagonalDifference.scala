@@ -4,7 +4,16 @@ import java.text._
 object Result {
 
     def diagonalDifference(arr: Array[Array[Int]]): Int = {
+        var d1 = 0
+        var d2 = 0
 
+        for(i <- 0 to (arr.size - 1)) {
+
+            lr += Integer.parseInt(rowStr(i))
+            rl += Integer.parseInt(rowStr(size - i - 1))
+        }
+
+        return Math.abs(lr - rl)
     }
 
 }
