@@ -5,7 +5,6 @@ using System.Linq;
 class Solution {
 
     static int simpleArraySum(int n, int[] ar) {
-        // Complete this function
         return ar.Sum();
     }
 
