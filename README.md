@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-### [Core CS](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving)
+### [Core CS](https://github.com/Lintik/hackerrank/tree/master/Core%20CS)
 
-- [Algorithms](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving/Algorithms)
-- [Data Structure](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving/Data%20Structure)
-- [Mathematics](https://github.com/Lintik/hackerrank/tree/master/Problem%20Solving/Mathematics)
+- [Algorithms](https://github.com/Lintik/hackerrank/tree/masterCore%20CS/Algorithms)
+- [Data Structure](https://github.com/Lintik/hackerrank/tree/masterCore%20CS/Data%20Structure)
+- [Mathematics](https://github.com/Lintik/hackerrank/tree/masterCore%20CS/Mathematics)
 
 ### [Tutorials](https://github.com/Lintik/hackerrank/tree/master/Tutorials)
 
