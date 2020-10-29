@@ -1,5 +1,6 @@
 import java.io._
 import java.text._
+import scala.io._
 
 object Result {
 
@@ -8,12 +9,11 @@ object Result {
         var d2 = 0
 
         for(i <- 0 to (arr.size - 1)) {
-
-            lr += Integer.parseInt(rowStr(i))
-            rl += Integer.parseInt(rowStr(size - i - 1))
+            d1 = d1 + arr(i)(i)
+            d2 = d2 + arr(i)(arr.size - i - 1)
         }
 
-        return Math.abs(lr - rl)
+        return Math.abs(d1 - d2)
     }
 
 }
