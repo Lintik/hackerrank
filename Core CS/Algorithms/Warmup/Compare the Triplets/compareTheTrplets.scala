@@ -1,20 +1,27 @@
 import java.io._
 import java.text._
+import scala.io._
 
-object Solution extends App {
+object Solution {
+
+    def compareTriplets(a: Array[Int], b: Array[Int]): Array[Int] = {
+        val r = Array(0,0)
+        if (a(0) > b(0)) r(0) += 1 else if (b(0) > a(0)) r(1) += 1 else r(0) = r(0)
+        if (a(1) > b(1)) r(0) += 1 else if (b(1) > a(1)) r(1) += 1 else r(0) = r(0)
+        if (a(2) > b(2)) r(0) += 1 else if (b(2) > a(2)) r(1) += 1 else r(0) = r(0)
+        return r
+    }
+
     def main(args: Array[String]) {
-        val sc = new java.util.Scanner (System.in);
-        var a0 = sc.nextInt();
-        var a1 = sc.nextInt();
-        var a2 = sc.nextInt();
-        var b0 = sc.nextInt();
-        var b1 = sc.nextInt();
-        var b2 = sc.nextInt();
-        var alice = 0;
-        var bob = 0;
-        if (a0 > b0) alice += 1 else if (b0 > a0) bob += 1 else alice = alice
-        if (a1 > b1) alice += 1 else if (b1 > a1) bob += 1 else alice = alice
-        if (a2 > b2) alice += 1 else if (b2 > a2) bob += 1 else alice = alice
-        println (alice + " " + bob)
+        val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
+
+        val a = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
+
+        val b = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
+        val result = compareTriplets(a, b)
+
+        printWriter.println(result.mkString(" "))
+
+        printWriter.close()
     }
 }
