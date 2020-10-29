@@ -50,16 +50,18 @@ __Sample Input__
 
 ```
 6
--4 3 -9 0 4 1         
+-4 3 -9 0 4 1
 ```
 
-__Sample Output__
+__Sample Output__  
+
 ```
 0.500000
 0.333333
 0.166667
 ```
-__Explanation__
+
+__Explanation__  
 
 There are __3__ positive numbers, __2__ negative numbers, and __1__ zero in the array.  
 The proportions of occurrence are positive: __3/6 = 0.500000__, negative: __2/6 = 0.333333__ and zeros: __1/6 = 0.166667__.
