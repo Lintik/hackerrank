@@ -1,7 +1,7 @@
 ## CORE CS
 
 
-### [Algorithms](https://github.com/Lintik/hackerrank/tree/master/CORE%20CS/Algorithms)
+### [Algorithms](https://github.com/Lintik/hackerrank/tree/master/Core%20CS/Algorithms)
 
 - Warmup
 - Implementation
@@ -17,7 +17,7 @@
 - NP Complete
 - Debugging
 
-### [Data Structure](https://github.com/Lintik/hackerrank/tree/master/CORE%20CS/Data%20Structure)
+### [Data Structure](https://github.com/Lintik/hackerrank/tree/master/Core%20CS/Data%20Structure)
 
 - Arrays
 - Linked Lists
@@ -31,7 +31,7 @@
 - Trie
 - Advanced
 
-### [Mathematics](https://github.com/Lintik/hackerrank/tree/master/CORE%20CS/Mathematics)
+### [Mathematics](https://github.com/Lintik/hackerrank/tree/master/Core%20CS/Mathematics)
 
 - Funcdamentals
 - Number Theory
