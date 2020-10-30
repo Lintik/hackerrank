@@ -1,8 +1,5 @@
-#include <cmath>
 #include <cstdio>
-#include <vector>
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 
@@ -21,6 +18,6 @@ int main(){
         else if(arr[i] < 0) cn++;
         else c0++;
     }
-    cout << cp/n << endl << cn/n << endl << c0/n;
+    printf("%0.06lf\n%0.06lf\n%0.06lf\n", cp, cn, c0);
     return 0;
 }
