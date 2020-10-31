@@ -1,6 +1,5 @@
 ### __Staircase__
 
-Staircase detail
 
 This is a staircase of size ___n_ = 4__:
 ```
@@ -31,7 +30,8 @@ A single integer, ___n___, denoting the size of the staircase.
 
 __Constraints__
 
-#### __0 &lt; _n_ &le; 100__
+### __0 &lt; _n_ &le; 100__  
+
 
 __Output Format__
 
