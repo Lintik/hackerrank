@@ -30,7 +30,7 @@ A single integer, ___n___, denoting the size of the staircase.
 
 __Constraints__
 
-### __0 &lt; _n_ &le; 100__  
+### 0 &lt; _n_ &le; 100  
 
 
 __Output Format__
