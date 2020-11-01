@@ -1,3 +1,3 @@
 n = input()
-arr = map(int, raw_input().split())
+arr = list(map(int, input().strip().split(' ')))
 print(arr.count(max(arr)))
