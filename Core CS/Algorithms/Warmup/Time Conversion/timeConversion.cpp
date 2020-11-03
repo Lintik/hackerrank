@@ -15,12 +15,10 @@ string timeConversion(string s) {
         }
     }
     else
-        if(h == 12){
+        if(h == 12)
             return "00" + s.substr(2,6);
-        }
-        else{   
-            return s.substr(0,8);
-        }        
+        else
+            return s.substr(0,8);    
 }
 
 int main()
