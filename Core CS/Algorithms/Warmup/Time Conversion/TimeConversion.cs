@@ -5,20 +5,12 @@ using System.Linq;
 class Solution {
 
     static string timeConversion(string s) {
-        string[] t = s.Split(':');
         if(s[8]=='A')
-            if(t[0] == "12")
-                return "00:" + t[1] + ":" + t[2].Substring(0,2);
-            else
-                return t[0] + ":" + t[1] + ":" + t[2].Substring(0,2);
-        else{
-            if(t[0] == "12")
-                return "12:" + t[1] + ":" + t[2].Substring(0,2);
-            if((Convert.ToInt32(t[0]) + 12)%24 < 10)
-                return "0"+((Convert.ToInt32(t[0]) + 12)%24).ToString() + ":" + t[1] + ":" + t[2].Substring(0,2);
-            else
-                return ((Convert.ToInt32(t[0]) + 12)%24).ToString() + ":" + t[1] + ":" + t[2].Substring(0,2);
-        }
+            if(s.Substring(0,2) == "12") return "00" + s.Substring(2,6);
+            else return s.Substring(0,8);
+        else
+            if(s.Substring(0,2) == "12") return s.Substring(0,8);
+            else return ((Convert.ToInt32(s.Substring(0,2)) + 12)%24).ToString() + s.Substring(2,6);
     }
 
     static void Main(String[] args) {
