@@ -6,9 +6,8 @@ string timeConversion(string s) {
     
     if(s[8] == 'P'){
         h += 12;
-        if(h == 24){
+        if(h == 24)
             return s.substr(0,8);
-        }
         else{   
             string hh = to_string(h);
             return hh + s.substr(2,6);
