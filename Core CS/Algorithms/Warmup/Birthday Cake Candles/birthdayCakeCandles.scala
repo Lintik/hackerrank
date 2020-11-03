@@ -7,7 +7,8 @@ import scala.io._
 object Result {
 
     def birthdayCakeCandles(candles: Array[Int]): Int = {
-        return candles.filter(_ == candles.max).length
+        val mx = candles.max
+        return candles.filter(_ == mx).length
     }
 
 }
