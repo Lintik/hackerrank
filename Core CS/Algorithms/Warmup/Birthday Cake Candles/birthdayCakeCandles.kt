@@ -4,6 +4,7 @@ import java.util.*
 import kotlin.collections.*
 
 fun birthdayCakeCandles(candles: Array<Int>): Int {
+    val mx = candles.max()
     return candles.filter{it == candles.max()}.size
 }
 
