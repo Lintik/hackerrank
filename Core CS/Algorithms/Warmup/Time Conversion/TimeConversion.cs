@@ -5,7 +5,6 @@ using System.Linq;
 class Solution {
 
     static string timeConversion(string s) {
-        // Complete this function
         string[] t = s.Split(':');
         if(s[8]=='A')
             if(t[0] == "12")
