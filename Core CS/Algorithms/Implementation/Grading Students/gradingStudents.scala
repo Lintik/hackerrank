@@ -6,8 +6,7 @@ import scala.io._
 object Result {
 
     def gradingStudents(grades: Array[Int]): Array[Int] = {
-    
-
+        return grades.map(g => if (g < 38 || g % 5 < 3) g else g + 5 - (g % 5))
     }
 
 }
