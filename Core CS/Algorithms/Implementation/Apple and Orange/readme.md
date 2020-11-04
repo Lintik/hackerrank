@@ -10,9 +10,9 @@ In the diagram below:
 
 ![appple_orange](https://github.com/Lintik/hackerrank/blob/master/Core%20CS/Algorithms/Implementation/Apple%20and%20Orange/1474218925-f2a791d52c-Appleandorange2.png)
 
-Given the value of _`d`_ for _`m`_ apples and _`n`_ oranges, determine how many apples and oranges will fall on Sam's house (i.e., in the inclusive range `[`_`s`_`,`_`t`_`]`)?  
+Given the value of _`d`_ for _`m`_ apples and _`n`_ oranges, determine how many apples and oranges will fall on Sam's house (i.e., in the inclusive range `[s, t]`)?  
 
-For example, Sam's house is between _`s`_ `= 7` and _`t`_ `= 10`. The apple tree is located at _`a`_ `= 4` and the orange at _`b`_ `= 12`. There are _`m`_ `= 3` apples and oranges. Apples are thrown _`apples`_ `= [2, 3, -4]` units distance from _`a`_, and _`oranges`_ `= [3, -2, -4]` units distance. Adding each apple distance to the position of the tree, they land at `[4 + 2, 4 + 3, 4 + -4]`. Oranges land at `[12 + 3, 12 + -2, 12 + -4] = [6, 7. 0]`. One apple and two oranges land in the inclusive range `7 - 10` so we print
+For example, Sam's house is between `s = 7` and `t = 10`. The apple tree is located at `a = 4` and the orange at `b = 12`. There are `m = 3` apples and oranges. Apples are thrown `apples = [2, 3, -4]` units distance from `a`, and `oranges = [3, -2, -4]` units distance. Adding each apple distance to the position of the tree, they land at `[4 + 2, 4 + 3, 4 + -4]`. Oranges land at `[12 + 3, 12 + -2, 12 + -4] = [6, 7. 0]`. One apple and two oranges land in the inclusive range `7 - 10` so we print
 
 ```
 1
