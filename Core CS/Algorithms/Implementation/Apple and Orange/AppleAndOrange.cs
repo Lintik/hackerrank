@@ -4,16 +4,9 @@ using System.IO;
 using System.Linq;
 class Solution {
 
-    static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
-        int c = 0, d = 0;
-        
-        foreach(int i in apples)
-            if(a+i >= s && a+i <= t) c++;
-        foreach(int i in oranges)
-            if(b+i >= s && b+i <= t) d++;
-        
-        Console.WriteLine(c);
-        Console.WriteLine(d);
+    static void CountApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
+        Console.WriteLine(apples.Where(apple => apple + a >= s && apple + a <= t).Count());
+        Console.WriteLine(oranges.Where(orange => orange + b >= s && orange + b <= t).Count());
     }
 
     
@@ -32,6 +25,6 @@ class Solution {
         string[] orange_temp = Console.ReadLine().Split(' ');
         int[] oranges = Array.ConvertAll(orange_temp,Int32.Parse);
         
-        countApplesAndOranges(s, t, a, b, apples, oranges);
+        CountApplesAndOranges(s, t, a, b, apples, oranges);
     }
 }
