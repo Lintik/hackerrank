@@ -6,8 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-    static int[] solve(int[] grades){
-        // Complete this function
+    static int[] gradingStudents(int[] grades){
         for(int i=0;i<grades.length;i++){
         if(grades[i]>=38 && grades[i]%5>2)
             grades[i] = grades[i] - grades[i]%5 + 5;
@@ -22,7 +21,7 @@ public class Solution {
         for(int grades_i=0; grades_i < n; grades_i++){
             grades[grades_i] = in.nextInt();
         }
-        int[] result = solve(grades);
+        int[] result = gradingStudents(grades);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + (i != result.length - 1 ? "\n" : ""));
         }
