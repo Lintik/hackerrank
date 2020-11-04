@@ -2,8 +2,7 @@
 
 using namespace std;
 
-vector < int > solve(vector < int > grades){
-    // Complete this function
+vector <int> gradingStudents(vector < int > grades){
     for(int i=0;i<grades.size();i++){
         if(grades[i]>=38 && grades[i]%5>2)
             grades[i] = grades[i] - grades[i]%5 + 5;
@@ -18,7 +17,7 @@ int main() {
     for(int grades_i = 0; grades_i < n; grades_i++){
        cin >> grades[grades_i];
     }
-    vector < int > result = solve(grades);
+    vector <int> result = gradingStudents(grades);
     for (ssize_t i = 0; i < result.size(); i++) {
         cout << result[i] << (i != result.size() - 1 ? "\n" : "");
     }
