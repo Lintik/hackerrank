@@ -7,8 +7,6 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     int a, b, m, n, s, t;
     cin >> s >> t;
     cin >> a >> b;
