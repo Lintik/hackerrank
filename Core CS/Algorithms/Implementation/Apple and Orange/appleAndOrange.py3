@@ -1,7 +1,4 @@
-#!/bin/python3
-
 import sys
-
 
 s,t = input().strip().split(' ')
 s,t = [int(s),int(t)]
