@@ -2,8 +2,7 @@
 
 import sys
 
-def solve(grades):
-    # Complete this function
+def gradingStudents(grades):
     g = []
     for i in grades:
         if i >= 38 and i%5 > 2:
@@ -18,5 +17,5 @@ grades_i = 0
 for grades_i in range(n):
    grades_t = int(input().strip())
    grades.append(grades_t)
-result = solve(grades)
+result = gradingStudents(grades)
 print ("\n".join(map(str, result)))
