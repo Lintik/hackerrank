@@ -1,4 +1,4 @@
-# Simple Array Sum
+### __Simple Array Sum__
 
 Given an array of integers, find the sum of its elements.  
 For example, if the array
