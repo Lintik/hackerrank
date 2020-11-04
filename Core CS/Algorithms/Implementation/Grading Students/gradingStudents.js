@@ -22,16 +22,12 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-/*
- * Complete the 'gradingStudents' function below.
- *
- * The function is expected to return an INTEGER_ARRAY.
- * The function accepts INTEGER_ARRAY grades as parameter.
- */
-
 function gradingStudents(grades) {
-    // Write your code here
-
+    for(let i=0;i<grades.size();i++){
+        if(grades[i]>=38 && grades[i]%5>2)
+            grades[i] = grades[i] - grades[i]%5 + 5;
+    }
+    return grades;
 }
 
 function main() {
