@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-    static String kangaroo(int x1, int v1, int x2, int v2) {
+    static String numberLineJumps(int x1, int v1, int x2, int v2) {
         if(v2 >= v1) return "NO";
         return (x2-x1)%(v1-v2) == 0? "YES":"NO";
     }
@@ -17,7 +17,7 @@ public class Solution {
         int v1 = in.nextInt();
         int x2 = in.nextInt();
         int v2 = in.nextInt();
-        String result = kangaroo(x1, v1, x2, v2);
+        String result = numberLineJumps(x1, v1, x2, v2);
         System.out.println(result);
     }
 }
