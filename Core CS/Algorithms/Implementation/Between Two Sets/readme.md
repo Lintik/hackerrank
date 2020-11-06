@@ -20,7 +20,35 @@ getTotalX has the following parameter(s):
 
 __Input Format__
 
-The first line contains two space-separated integers,
-and , the number of elements in array and the number of elements in array .
-The second line contains distinct space-separated integers describing where .
-The third line contains distinct space-separated integers describing where 
+The first line contains two space-separated integers, `n` and `m`, the number of elements in array `a` and the number of elements in array `b`.  
+The second line contains `n` distinct space-separated integers describing `a[i]` where 0 &le; _i_ &lt; _n_.  
+The third line contains `m` distinct space-separated integers describing `b[j]` where 0 &le; _j_ &lt; _m_.  
+
+__Contraints__
+
+- 1 &le; _n_,_m_ &le; 10
+- 1 &le; _a_[_i_] &le; 100
+- 1 &le; _b_[_j_] &le; 100
+
+__Output Format__
+
+Print the number of integers that are considered to be between
+`a` and `b`.
+
+__Sample Input__
+
+```
+2 3
+2 4
+16 32 96
+```
+__Sample Output__
+```
+3
+```
+__Explanation__
+
+2 and 4 divide evenly into 4, 8, 12 and 16.  
+4, 8 and 16 divide evenly into 16, 32, 96.  
+
+4, 8 and 16 are the only three numbers for which each element of a is a factor and each is a factor of all elements of b.
