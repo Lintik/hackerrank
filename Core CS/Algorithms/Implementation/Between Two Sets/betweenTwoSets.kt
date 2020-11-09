@@ -35,7 +35,7 @@ fun getTotalX(a: Array<Int>, b: Array<Int>): Int {
     var count = 0
     for(int i = l, j =2; i<=g; i=l*j,j++){
         if(g%i==0)
-            count++;
+            count++
     }
     return count
 }
