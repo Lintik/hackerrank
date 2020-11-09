@@ -29,13 +29,18 @@ fun lcm(a: Array<Int>): Int{
 }
 
 fun getTotalX(a: Array<Int>, b: Array<Int>): Int {
-    var l = lcm(a)
-    var g = gcd(b)
+    val l = lcm(a)
+    val g = gcd(b)
     
     var count = 0
-    for(int i = l, j =2; i<=g; i=l*j,j++){
+    var i = l
+    var j = 2
+    while(i <= g){
         if(g%i==0)
             count++
+            
+        i = l * j
+        j++
     }
     return count
 }
