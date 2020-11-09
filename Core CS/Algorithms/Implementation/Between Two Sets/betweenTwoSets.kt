@@ -4,26 +4,26 @@ import java.util.*
 
 fun gcd(a: Int, b: Int): Int{
     if (b == 0) 
-        return a; 
+        return a
     return gcd(b, a % b); 
 }
 
 fun gcd(a: Array<Int>): Int{
-    var ans = a[0];
+    var ans = a[0]
     for(i in 1 until a.size)
         ans = gcd(ans, a[i])
-    return ans;
+    return ans
 }
 
 fun lcm(a: Int, b: Int): Int{
-    return a * (b / gcd(a, b));
+    return a * (b / gcd(a, b))
 }
 
 fun lcm(a: Array<Int>): Int{
-    var ans = a[0]; 
+    var ans = a[0]
   
     for (i in 1 until a.size) 
-        ans = (((a[i] * ans)) / (gcd(a[i], ans))); 
+        ans = (((a[i] * ans)) / (gcd(a[i], ans)))
   
     return ans; 
 }
