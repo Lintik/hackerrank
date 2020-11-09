@@ -3,7 +3,6 @@
 import sys
 
 def getRecord(s):
-    # Complete this function
     maxc = minc = 0
     m = n = s[0]
     
