@@ -6,7 +6,7 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
-def gcd(a):
+def gcdArray(a):
     ans = a[0]
     
     for i in range(1,len(a)):
@@ -14,26 +14,26 @@ def gcd(a):
     return ans
 
 def lcm(a, b):
-    return a * (b / gcd(a, b))
+    return a * int(b / gcd(a, b))
 
-def lcm(a):
-    ans = a(0)
+def lcmArray(a):
+    ans = a[0]
 
     for i in range(1,len(a)): 
-        ans = (((a(i) * ans)) / (gcd(a(i), ans))) 
+        ans = int(((a[i] * ans)) / (gcd(a[i], ans)))
 
     return ans
 
 
 def getTotalX(a, b):
-    l = lcm(a)
-    g = gcd(b)
+    l = lcmArray(a)
+    g = gcdArray(b)
 
     count = 0
     i = l
     j = 2
-    while(i <= g):
-        if(g%i==0):
+    while i <= g:
+        if g%i == 0:
             count += 1
             
         i = l * j
