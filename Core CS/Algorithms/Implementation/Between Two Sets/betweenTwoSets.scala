@@ -1,31 +1,32 @@
 import java.io._
 import java.text._
 import java.util._
+import scala.io._
 
 object Result {
     
-    def gcd(a: Int, b: Int): Int {
+    def gcd(a: Int, b: Int): Int = {
         if (b == 0) 
             return a
         return gcd(b, a % b)
     }
 
-    def gcd(a: Array[Int]): Int{
-        var ans = a[0]
-        for(i in 1 until a.size)
-            ans = gcd(ans, a[i])
+    def gcd(a: Array[Int]): Int = {
+        var ans = a(0)
+        for(i <- 1 until a.size)
+            ans = gcd(ans, a(i))
         return ans
     }
 
-    def lcm(a: Int, b: Int): Int{
+    def lcm(a: Int, b: Int): Int = {
         return a * (b / gcd(a, b))
     }
 
-    def lcm(a: Array[Int]): Int{
-        var ans = a[0]
+    def lcm(a: Array[Int]): Int = {
+        var ans = a(0)
     
-        for (i in 1 until a.size) 
-            ans = (((a[i] * ans)) / (gcd(a[i], ans))) 
+        for (i <- 1 until a.size) 
+            ans = (((a(i) * ans)) / (gcd(a(i), ans))) 
     
         return ans
     }
@@ -40,10 +41,10 @@ object Result {
         var j = 2
         while(i <= g){
             if(g%i==0)
-                count++
+                count += 1
                 
             i = l * j
-            j++
+            j += 1
         }
         return count
     }
