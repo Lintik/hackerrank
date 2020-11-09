@@ -28,7 +28,7 @@ function gcd(a, b){
     return gcd(b, a % b); 
 }
 
-function gcd(a){
+function gcdArray(a){
     let ans = a[0];
     for (let i = 1; i < a.length; i++) {
         ans = gcd(ans, a[i]);
@@ -40,7 +40,7 @@ function lcm(a, b){
     return a * (b / gcd(a, b));
 }
 
-function lcm(a){
+function lcmArray(a){
     let ans = a[0]; 
 
     for (let i = 1; i < a.length; i++) 
@@ -51,8 +51,8 @@ function lcm(a){
 }
 
 function getTotalX(arr, brr) {
-    let l = lcm(arr);
-    let g = gcd(brr);
+    let l = lcmArray(arr);
+    let g = gcdArray(brr);
     
     let count = 0;
     for(let i = l, j =2; i<=g; i=l*j,j++){
