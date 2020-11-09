@@ -4,30 +4,30 @@ import java.util._
 
 object Result {
     
-    def gcd(a: Int, b: Int): Int{
+    def gcd(a: Int, b: Int): Int {
         if (b == 0) 
-            return a; 
-        return gcd(b, a % b); 
+            return a
+        return gcd(b, a % b)
     }
 
     def gcd(a: Array[Int]): Int{
-        var ans = a[0];
+        var ans = a[0]
         for(i in 1 until a.size)
             ans = gcd(ans, a[i])
-        return ans;
+        return ans
     }
 
     def lcm(a: Int, b: Int): Int{
-        return a * (b / gcd(a, b));
+        return a * (b / gcd(a, b))
     }
 
     def lcm(a: Array[Int]): Int{
-        var ans = a[0]; 
+        var ans = a[0]
     
         for (i in 1 until a.size) 
-            ans = (((a[i] * ans)) / (gcd(a[i], ans))); 
+            ans = (((a[i] * ans)) / (gcd(a[i], ans))) 
     
-        return ans; 
+        return ans
     }
 
 
@@ -36,9 +36,14 @@ object Result {
         var g = gcd(b)
         
         var count = 0
-        for(int i = l, j =2; i<=g; i=l*j,j++){
+        var i = l
+        var j = 2
+        while(i <= g){
             if(g%i==0)
                 count++
+                
+            i = l * j
+            j++
         }
         return count
     }
