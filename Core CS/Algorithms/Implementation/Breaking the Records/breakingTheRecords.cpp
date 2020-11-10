@@ -2,7 +2,6 @@
 using namespace std;
 
 vector < int > getRecord(vector < int > s){
-    // Complete this function
     int maxc = 0,
         minc = 0,
         max = s[0],
@@ -18,9 +17,7 @@ vector < int > getRecord(vector < int > s){
             minc++;
         }
     }
-    vector<int> r;
-    r.push_back(maxc);
-    r.push_back(minc);
+    vector<int> r{maxc,minc};
     return r;
 }
 
