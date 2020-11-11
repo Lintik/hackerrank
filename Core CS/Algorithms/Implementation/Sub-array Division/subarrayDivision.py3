@@ -4,12 +4,16 @@ import sys
 
 def subarrayDivision(n, s, d, m):
     t = c = 0
-    for i in range(m): t+=s[i];
-    if(t==d): c+=1
+    for i in range(m): 
+        t+=s[i]
+
+    if(t==d): 
+        c+=1
         
     for i in range(m,n):
         t = t - s[i-m] + s[i]
-        if(t==d): c+=1
+        if(t==d): 
+            c+=1
        
     return c
 

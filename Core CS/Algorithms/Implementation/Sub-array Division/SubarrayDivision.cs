@@ -9,11 +9,11 @@ class Solution {
             c=0;
         
         for(int i=0;i<m;i++) t+=s[i];
+
         if(t==d) c++;
         
         for(int i=m;i<n;i++){
             t = t - s[i-m] + s[i];
-            
             if(t==d) c++;
         }
         return c;
