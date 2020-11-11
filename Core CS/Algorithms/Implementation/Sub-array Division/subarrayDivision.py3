@@ -2,8 +2,7 @@
 
 import sys
 
-def solve(n, s, d, m):
-    # Complete this function
+def subarrayDivision(n, s, d, m):
     t = c = 0
     for i in range(m): t+=s[i];
     if(t==d): c+=1
@@ -18,5 +17,5 @@ n = int(input().strip())
 s = list(map(int, input().strip().split(' ')))
 d, m = input().strip().split(' ')
 d, m = [int(d), int(m)]
-result = solve(n, s, d, m)
+result = subarrayDivision(n, s, d, m)
 print(result)

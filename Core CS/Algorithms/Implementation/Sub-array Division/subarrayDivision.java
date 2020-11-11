@@ -6,8 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-    static int solve(int n, int[] s, int d, int m){
-        // Complete this function
+    static int subarrayDivision(int n, int[] s, int d, int m){
         int t=0,
         c=0;
         
@@ -30,7 +29,7 @@ public class Solution {
         }
         int d = in.nextInt();
         int m = in.nextInt();
-        int result = solve(n, s, d, m);
+        int result = subarrayDivision(n, s, d, m);
         System.out.println(result);
     }
 }
