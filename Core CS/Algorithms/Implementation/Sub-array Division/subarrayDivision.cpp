@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int solve(int n, vector < int > s, int d, int m){
-    // Complete this function
+int subarrayDivision(int n, vector < int > s, int d, int m){
     int t=0,
         c=0;
     for(int i=0;i<m;i++){
@@ -27,7 +25,7 @@ int main() {
     int d;
     int m;
     cin >> d >> m;
-    int result = solve(n, s, d, m);
+    int result = subarrayDivision(n, s, d, m);
     cout << result << endl;
     return 0;
 }
