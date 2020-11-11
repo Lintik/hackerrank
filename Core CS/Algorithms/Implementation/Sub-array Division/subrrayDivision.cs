@@ -4,10 +4,9 @@ using System.IO;
 using System.Linq;
 class Solution {
 
-    static int solve(int n, int[] s, int d, int m){
-        // Complete this function
+    static int SubarrayDivision(int n, int[] s, int d, int m){
         int t=0,
-        c=0;
+            c=0;
         
         for(int i=0;i<m;i++) t+=s[i];
         if(t==d) c++;
@@ -26,7 +25,7 @@ class Solution {
         string[] tokens_d = Console.ReadLine().Split(' ');
         int d = Convert.ToInt32(tokens_d[0]);
         int m = Convert.ToInt32(tokens_d[1]);
-        int result = solve(n, s, d, m);
+        int result = SubarrayDivision(n, s, d, m);
         Console.WriteLine(result);
     }
 }
