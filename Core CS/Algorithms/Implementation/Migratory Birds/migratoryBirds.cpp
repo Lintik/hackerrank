@@ -3,7 +3,6 @@
 using namespace std;
 
 int migratoryBirds(int n, vector <int> ar) {
-    // Complete this function
     sort(ar.begin(),ar.end());
     
     int previous = ar[0];
