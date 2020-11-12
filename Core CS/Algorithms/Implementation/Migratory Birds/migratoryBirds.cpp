@@ -1,29 +1,21 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int migratoryBirds(int n, vector <int> ar) {
-    sort(ar.begin(),ar.end());
-    
-    int previous = ar[0];
-    int popular = ar[0];
-    int count = 1;
-    int maxCount = 1;
+    int r[5] = {};
 
-    for (int i = 1; i < ar.size(); i++) {
-        if (ar[i] == previous)
-            count++;
-        else {
-            if (count > maxCount) {
-                popular = ar[i-1];
-                maxCount = count;
-            }
-            previous = ar[i];
-            count = 1;
+    for (auto a: ar)
+        r[a-1]++;
+
+    int mx = 0;
+    int mx_i = 0;
+    for(int i = 0;i < 5;i++){
+        if(r[i] > mx){
+            mx = r[i];
+            mx_i = i;
         }
     }
-
-    return count > maxCount ? ar[ar.size()-1] : popular;
+    return mx_i + 1;
 }
 
 int main() {
