@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 class Solution {
 
-    static int migratoryBirds(int n, int[] ar) {
+    static int MigratoryBirds(int n, int[] ar) {
         int[] r = new int[5];
     
         foreach(int a in ar)
@@ -25,7 +25,7 @@ class Solution {
         int n = Convert.ToInt32(Console.ReadLine());
         string[] ar_temp = Console.ReadLine().Split(' ');
         int[] ar = Array.ConvertAll(ar_temp,Int32.Parse);
-        int result = migratoryBirds(n, ar);
+        int result = MigratoryBirds(n, ar);
         Console.WriteLine(result);
     }
 }
