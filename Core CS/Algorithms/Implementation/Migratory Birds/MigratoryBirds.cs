@@ -5,28 +5,20 @@ using System.Linq;
 class Solution {
 
     static int migratoryBirds(int n, int[] ar) {
-        // Complete this function
-        Array.Sort(ar);
+        int[] r = new int[5];
     
-        int previous = ar[0];
-        int popular = ar[0];
-        int count = 1;
-        int maxCount = 1;
-        
-        for (int i = 1; i < ar.Length; i++) {
-            if (ar[i] == previous)
-                count++;
-            else {
-                if (count > maxCount) {
-                    popular = ar[i-1];
-                    maxCount = count;
-                }
-                previous = ar[i];
-                count = 1;
+        foreach(int a in ar)
+            r[a-1]++;
+            
+        int mx = 0;
+        int mx_i = 0;
+        for(int i = 0;i < 5;i++){
+            if(r[i] > mx){
+                mx = r[i];
+                mx_i = i;
             }
         }
-
-        return count > maxCount ? ar[ar.Length-1] : popular;
+        return mx_i + 1;
     }
 
     static void Main(String[] args) {
