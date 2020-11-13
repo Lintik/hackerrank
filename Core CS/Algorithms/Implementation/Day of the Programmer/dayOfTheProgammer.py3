@@ -2,8 +2,7 @@
 
 import sys
 
-def solve(year):
-    # Complete this function
+def dayOfTheProgrammer(year):
     mon7 = 215
     feb = 0#days in february
     if(year < 1918): #julian
@@ -16,5 +15,5 @@ def solve(year):
     return str(feb) + ".09." + str(year)
 
 year = int(input().strip())
-result = solve(year)
+result = dayOfTheProgrammer(year)
 print(result)

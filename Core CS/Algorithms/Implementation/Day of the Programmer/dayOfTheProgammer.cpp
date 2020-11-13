@@ -2,8 +2,7 @@
 
 using namespace std;
 
-string solve(int year){
-    // Complete this function
+string dayOfTheProgrammer(int year){
     int mon7 = 215;
     short int feb; //days in february
     if(year < 1918) //julian
@@ -19,7 +18,7 @@ string solve(int year){
 int main() {
     int year;
     cin >> year;
-    string result = solve(year);
+    string result = dayOfTheProgrammer(year);
     cout << result << endl;
     return 0;
 }

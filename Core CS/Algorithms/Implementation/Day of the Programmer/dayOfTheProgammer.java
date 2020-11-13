@@ -6,8 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-    static String solve(int year){
-         // Complete this function
+    static String dayOfTheProgrammer(int year){
         int mon7 = 215;
         int feb; //days in february
         if(year < 1918) //julian
@@ -23,7 +22,7 @@ public class Solution {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int year = in.nextInt();
-        String result = solve(year);
+        String result = dayOfTheProgrammer(year);
         System.out.println(result);
     }
 }

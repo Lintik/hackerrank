@@ -4,8 +4,7 @@ using System.IO;
 using System.Linq;
 class Solution {
 
-    static string solve(int year){
-        // Complete this function
+    static string DayOfTheProgrammer(int year){
         int mon7 = 215;
         int feb; //days in february
         if(year < 1918) //julian
@@ -20,7 +19,7 @@ class Solution {
 
     static void Main(String[] args) {
         int year = Convert.ToInt32(Console.ReadLine());
-        string result = solve(year);
+        string result = DayOfTheProgrammer(year);
         Console.WriteLine(result);
     }
 }
