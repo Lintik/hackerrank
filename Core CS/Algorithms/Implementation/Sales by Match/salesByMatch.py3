@@ -1,22 +1,14 @@
 import sys
 import math
+from collections import Counter
 
-def sockMerchant(n, ar):
-    ar.sort()
-    t=0
-    c=1
-    prev = ar[0]
-    for i in range(1,n):
-        if(prev == ar[i]): c+=1
-        else:
-            t+=math.floor(c/2)
-            c=1
-            prev=ar[i]
-            
-    t+=math.floor(c/2)
-    return t
+def pair(x):
+    return int(x/2) 
+
+def sockMerchant(ar):
+    return sum(map(pair, Counter(ar).values()))
 
 n = int(input().strip())
 ar = list(map(int, input().strip().split(' ')))
-result = sockMerchant(n, ar)
+result = sockMerchant(ar)
 print(result)
