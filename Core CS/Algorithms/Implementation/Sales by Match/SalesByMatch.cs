@@ -5,7 +5,6 @@ using System.Linq;
 class Solution {
 
     static int sockMerchant(int n, int[] ar) {
-        // Complete this function
         Array.Sort(ar);
         int t=0;
         int c=1;

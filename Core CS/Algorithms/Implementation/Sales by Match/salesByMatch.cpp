@@ -3,7 +3,6 @@
 using namespace std;
 
 int sockMerchant(int n, vector <int> ar) {
-    // Complete this function
     sort(ar.begin(),ar.end());
     int t=0;
     int c=1;

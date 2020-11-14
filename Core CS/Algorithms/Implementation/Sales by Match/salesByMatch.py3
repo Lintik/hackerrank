@@ -1,10 +1,7 @@
-#!/bin/python3
-
 import sys
 import math
 
 def sockMerchant(n, ar):
-    # Complete this function
     ar.sort()
     t=0
     c=1

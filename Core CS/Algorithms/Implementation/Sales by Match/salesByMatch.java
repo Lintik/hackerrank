@@ -7,7 +7,6 @@ import java.util.regex.*;
 public class Solution {
 
     static int sockMerchant(int n, int[] ar) {
-        // Complete this function
         Arrays.sort(ar);
         int t=0;
         int c=1;
