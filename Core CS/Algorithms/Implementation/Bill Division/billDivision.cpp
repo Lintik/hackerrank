@@ -1,22 +1,15 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int bonAppetit(int n, int k, int b, vector <int> ar) {
-    // Complete this function
-    int sum = 0;
-    int t = ar[k];
-    ar[k] = 0;
-    for(int i=0;i<n;i++){
-        sum+=ar[i];
-    }
-    if(b - sum/2 == 0){
-        cout << "Bon Appetit" << endl;
-        return 0;
-    }
-    else{
-        return b - sum/2;
-    }
+void bonAppetit(int k, int b, vector <int> ar) {
+    int s = 0 - ar[k];
+    for(int a: ar)
+        s += a;
+        
+    if(b - s/2 == 0)
+        cout << "Bon Appetit";
+    else
+        cout << b - s/2;
 }
 
 int main() {
@@ -29,8 +22,5 @@ int main() {
     }
     int b;
     cin >> b;
-    int result = bonAppetit(n, k, b, ar);
-    if(result != 0)
-        cout << result << endl;
-    return 0;
+    bonAppetit(k, b, ar);
 }

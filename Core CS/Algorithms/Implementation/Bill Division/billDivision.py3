@@ -3,7 +3,6 @@
 import sys
 
 def bonAppetit(n, k, b, ar):
-    # Complete this function
     s = 0
     t = ar[k]
     ar[k] = 0
