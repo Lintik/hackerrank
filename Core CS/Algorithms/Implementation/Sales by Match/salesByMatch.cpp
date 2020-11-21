@@ -2,21 +2,19 @@
 using namespace std;
 
 int sockMerchant(int n, vector <int> ar) {
-    sort(ar.begin(),ar.end());
-    int t=0;
-    int c=1;
-    int prev = ar[0];
-    for(int i = 1;i<n;i++){
-        if(prev == ar[i])
-            c++;
-        else{
-            t+=c/2;
-            c=1;
-            prev=ar[i];
-        }
+    map<int, int> m;
+    int r = 0;
+    for(int a: ar){
+        if(m.count(a) != 0)
+            m[a]++;
+        else
+            m.insert(pair<int,int>(a,1));
     }
-    t+=c/2;
-    return t;
+
+    for (auto const & [k, v] : m){
+        r += v/2;
+    }
+    return r;
 }
 
 int main() {
