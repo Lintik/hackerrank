@@ -1,26 +1,24 @@
 import java.io.*;
 import java.util.*;
 import java.text.*;
-import java.math.*;
 
 public class Solution {
 
     static int sockMerchant(int n, int[] ar) {
-        Arrays.sort(ar);
-        int t=0;
-        int c=1;
-        int prev = ar[0];
-        for(int i = 1;i<n;i++){
-            if(prev == ar[i])
-               c++;
-            else{
-                t+=c/2;
-                c=1;
-                prev=ar[i];
-            }
-        }   
-        t+=c/2;
-        return t;
+         Hashtable<Integer, Integer> m = new Hashtable<Integer, Integer>();
+         int r = 0;
+
+         for(int a: ar){
+             if(m.containsKey(a))
+                m.put(a, m.get(a) + 1);
+            else
+                m.put(a, 1);
+         }
+
+         for(int a: m.values())
+            r += a/2;
+
+        return r;
     }
 
     public static void main(String[] args) {
