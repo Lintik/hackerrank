@@ -1,32 +1,27 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System;
+
 class Solution {
 
     static int sockMerchant(int n, int[] ar) {
-        Array.Sort(ar);
-        int t=0;
-        int c=1;
-        int prev = ar[0];
-        for(int i = 1;i<n;i++){
-            if(prev == ar[i])
-               c++;
-            else{
-                t+=c/2;
-                c=1;
-                prev=ar[i];
-            }
-        }   
-        t+=c/2;
-        return t;
+        return ar.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count()).Values.Aggregate(0, (acc, x) => acc + x/2);
     }
 
-    static void Main(String[] args) {
+    static void Main(string[] args) {
+        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
         int n = Convert.ToInt32(Console.ReadLine());
-        string[] ar_temp = Console.ReadLine().Split(' ');
-        int[] ar = Array.ConvertAll(ar_temp,Int32.Parse);
+
+        int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp))
+        ;
         int result = sockMerchant(n, ar);
-        Console.WriteLine(result);
+
+        textWriter.WriteLine(result);
+
+        textWriter.Flush();
+        textWriter.Close();
     }
 }
