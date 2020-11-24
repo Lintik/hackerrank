@@ -25,7 +25,18 @@ function readLine() {
 }
 
 function sockMerchant(n, ar) {
-    
+    var m = {};
+    let r = 0;
+    for(let i = 0;i < n;i++){
+        if(ar[i] in m)
+            m[ar[i]] += 1
+        else
+            m[ar[i]] = 1;
+    }
+
+    return Object.values(m).reduce(function(a, b){
+        return a + Math.floor(b /2);
+    }, 0)
 }
 
 function main() {
