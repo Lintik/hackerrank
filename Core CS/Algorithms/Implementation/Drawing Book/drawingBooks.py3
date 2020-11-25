@@ -3,7 +3,6 @@
 import sys
 
 def solve(n, p):
-    # Complete this function
     return min(p//2,n//2-p//2)
 
 n = int(input().strip())

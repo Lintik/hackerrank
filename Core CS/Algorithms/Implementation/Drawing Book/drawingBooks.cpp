@@ -3,9 +3,7 @@
 using namespace std;
 
 int solve(int n, int p){
-    // Complete this function
-    return min(p/2,n/2-p/2);
-    
+    return min(p/2,n/2-p/2);  
 }
 
 int main() {
