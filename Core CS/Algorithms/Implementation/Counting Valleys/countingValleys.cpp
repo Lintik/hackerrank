@@ -1,8 +1,4 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 int countValley(int n, vector<char> ar){
@@ -20,7 +16,6 @@ int countValley(int n, vector<char> ar){
 }
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     int n;
     cin >> n;
     vector<char> ar(n);
