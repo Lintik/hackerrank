@@ -5,7 +5,6 @@ using System.Linq;
 class Solution {
 
     static int solve(int n, int p){
-        // Complete this function
         return Math.Min(p/2,n/2-p/2);
     }
 
