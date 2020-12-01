@@ -25,13 +25,20 @@ function readLine() {
 function countingValleys(steps, path) {
     let depth = 0;
     let t = 0;
-    for(let i = 0; i < n;i++){
+    for(let i = 0; i < steps;i++){
         if(depth < 0){
-            ar[i]=='U'? depth++:depth--;
-            if(depth == 0) t++;
+            if(path[i]=='U')
+                depth++;
+            else
+                depth--;
+            if(depth == 0) 
+                t++;
         }
         else
-            ar[i]=='U'? depth++:depth--;
+            if (path[i]=='U') 
+                depth++;
+            else
+                depth--;
     }
     return t;
 }
