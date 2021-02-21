@@ -1,0 +1,39 @@
+body {
+  width: 33%;
+}
+
+#res {
+  display: block;
+  font-size: 20px;
+  height: 48px;
+  background-color: lightgray;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+#btns {
+  display: block;
+  overflow: hidden;
+}
+
+#btns button {
+  display: block;
+  float: left;
+  width: 25%;
+  height: 36px;
+  font-size: 18px;
+  background: black;
+  color: red;
+}
+
+#btns #btn0,
+#btns #btn1 {
+  background-color: lightgreen;
+  color: brown;
+}
+
+#btns #btnClr,
+#btns #btnEql {
+  background-color: darkgreen;
+  color: white;
+}
